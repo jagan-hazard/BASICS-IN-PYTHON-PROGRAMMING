@@ -64,7 +64,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 
   	2.2. Data Types
   	---------------			
-	
+		
 ![Screenshot](data_type.png)
 
 
