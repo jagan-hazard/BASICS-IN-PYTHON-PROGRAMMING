@@ -66,7 +66,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
   	2.2. Data Types
   	---------------			
 	
-	![alt text](https://github.com/jagan-hazard/BASICS-IN-PYTHON-PROGRAMMING/blob/master/data_type.png)
+![alt text](data_type.png)
 
 
 
