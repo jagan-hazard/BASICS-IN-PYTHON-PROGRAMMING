@@ -74,7 +74,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 			- The Object are able to modify even after the creation, such object is said to be mutable object.
 			- The Object are not able to modify once it's created, such object is said to be immutable object.
 
-![Screenshot](adv_data_type.png)
+![Screenshot](adv_data_types.png)
 
 		2.1. Numeric Data types:
 		------------------------
