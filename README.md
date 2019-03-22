@@ -19,7 +19,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 	Data Science - Numpy,NLTK,Matplotlib,scipy,pandas, etc,
 	Web Scrapping - Scrapy, Beautiful soup, etc,
 	GUI Development -PyQT,Kivy, etc.
-	
+		
 	  2. Basic Elements in Python
   -----------------------------
     2.1. Variables, Identifiers and Keywords
@@ -66,7 +66,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
   	2.2. Data Types
   	---------------			
 	
-![alt text](data_type.png)
+			![alt text](data_type.png)
 
 
 
