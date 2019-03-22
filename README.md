@@ -65,7 +65,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
   	2.2. Data Types
   	---------------			
 	
-	![alt text](data_type.png)
+![alt text](data_type.png)
 
 
 
