@@ -10,8 +10,9 @@ It is open source software, well documented and vast community to support you. P
 		Games and 3D graphics,
 		Scientific and Numerics,
 		Used as scripting language and go on.
-It has vast libraries and packages that will help you in anywhere, few notable libraries in python are
-		Data Science - Numpy,NLTK,Matplotlib,scipy,pandas, etc.
-		Web Scrapping - Scrapy, Beautiful soup, etc.
+
+It has vast libraries and packages that will help you in anywhere, few notable libraries in python are,
+		Data Science - Numpy,NLTK,Matplotlib,scipy,pandas, etc,
+		Web Scrapping - Scrapy, Beautiful soup, etc,
 		GUI Development -PyQT,Kivy, etc.
 
