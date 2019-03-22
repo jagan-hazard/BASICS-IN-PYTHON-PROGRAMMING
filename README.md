@@ -17,8 +17,7 @@ It is open source software, well documented and vast community to support you. P
 It has vast libraries and packages that will help you in anywhere, few notable libraries in python are,
 
 	Data Science - Numpy,NLTK,Matplotlib,scipy,pandas, etc,
-	Web Scrapping - Scrapy, Beautiful soup, etc,
-	GUI Development -PyQT,Kivy, etc.
+	Web Scrapping - Scrapy, Beautiful soup, etc,	GUI Development -PyQT,Kivy, etc.
 		
 	  2. Basic Elements in Python
   -----------------------------
@@ -66,7 +65,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
   	2.2. Data Types
   	---------------			
 	
-			![alt text](data_type.png)
+	![alt text](data_type.png)
 
 
 
