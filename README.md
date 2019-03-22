@@ -20,7 +20,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 	Web Scrapping - Scrapy, Beautiful soup, etc,
 	GUI Development -PyQT,Kivy, etc.
 	
-  2. Basic Elements in Python
+	  2. Basic Elements in Python
   -----------------------------
     2.1. Variables, Identifiers and Keywords
     ----------------------------------------
@@ -65,7 +65,8 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 
   	2.2. Data Types
   	---------------			
-
+	
+	![alt text](https://github.com/jagan-hazard/BASICS-IN-PYTHON-PROGRAMMING/blob/master/data_type.png)
 
 
 
