@@ -200,10 +200,133 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 
 						e.g:
 							a="my name is pYTHON"
-							b=a.find("my")        # b=0
-							c=a.find("my",0,20)   # c=0
-							d=a.find("my",5,20)   # error
+							b=a.index("my")        # b=0
+							c=a.index("my",0,20)   # c=0
+							d=a.index("my",5,20)   # error
 							print(b,c,d)           # gives 0,0,(error)
+
+					2.2.2.8. isdigit():
+					------------------------------------------------
+						- This method will check whether the given string has digits or not.
+						- It doesn't check for other language numbers.
+						- It will return
+								True - if all elements are digits (0-9).
+								False - if it has one or more non-digits.
+						-  syntax:    <string_var_name>.isdigit()
+
+						e.g:
+							a="jagan123"
+							b="123456"
+							c="三1234"   #  "三" is three in chinese
+							d=a.isdigit()        # False
+							e=b.isdigit()        # True
+							f=c.isdigit()        # False
+							print(d,e,f)           # gives False, True, False
+
+					2.2.2.9. isnumeric():
+					------------------------------------------------
+						- This method will check whether the given string has digits or not.
+						- It will check for other language number as well
+						- It will return
+								True - if all elements are digits (0-9).
+								False - if it has one or more non-digits.
+						-  syntax:    <string_var_name>.isnumeric()
+
+						e.g:
+							a="jagan123"
+							b="123456"
+							c="三1234"   #  "三" is three in chinese
+							d=a.isdigit()        # False
+							e=b.isdigit()   # True
+							f=c.isdigit()        # False
+							print(d,e,f)           # gives False, True, True
+					
+					2.2.2.10. isalpha():
+					--------------------
+						- This method will check whether the given string has alphabets or not.
+						- It will return
+								True - if all elements are alphabets (a-z,A-Z).
+								False - if it has one or more digits.
+						-  syntax:    <string_var_name>.isalpha()
+
+						e.g:
+							a="jagan123"
+							b="jagan"
+							c=a.isalpha()        # False
+							d=b.isalpha()   	 # True
+							print(c,d)           # gives False, True
+
+					2.2.2.11. isalnum():
+					--------------------
+						- This method will check whether the given string has digits and alphabets.
+						- It will return
+								True - if all elements are digits or alphabets (0-9,a-z,A-Z).
+								False - if it has one or more non-digits and non-alphabets.
+						-  syntax:    <string_var_name>.isalnum()
+
+						e.g:
+							a="jagan123"
+							b="jagan_55"         # "_" is non-digit and non-alphabet
+							c=a.isalnum()        # True
+							d=b.isalnum()	     # False
+							print(c,d)           # gives True, False
+
+					2.2.2.12. islower():
+					--------------------
+						- This method will check whether the given string has alphabets which are lower case (digits are allowed).
+						- It will return
+								True - if all alphabets are lower case (a-z).
+								False - if it has one or more non-lower case alphabets.
+						-  syntax:    <string_var_name>.islower()
+
+						e.g:
+							a="jagan123"
+							b="Jagan"
+							c=a.islower()        # True
+							d=b.islower()	     # False
+							print(c,d)           # gives True, False
+
+
+					2.2.2.13. isupper():
+					--------------------
+						- This method will check whether the given string has all alphabets which are upper case (digits are allowed).
+						- It will return
+								True - if all elements are upper case (A-Z).
+								False - if it has one or more non-upper case alphabets.
+						-  syntax:    <string_var_name>.isupper()
+
+						e.g:
+							a="JAGAN123"
+							b="Jagan"
+							c=a.islower()        # True
+							d=b.islower()	     # False
+							print(c,d)           # gives True, False
+
+					2.2.2.14. max(string,*iterables):
+					--------------------
+						- This method will return the maximum item from the given string/list.
+						- It will return maximum from string as per it's ASCII value
+						-  syntax:    max(string,*iterables)
+
+						e.g:
+							a=[1,2,3,4,5]
+							b="Zzxyabcde"
+							c=max(a)    		#5
+							d=max(b)    		#z as per ASCII table   
+							print(c,d)  		#5, z
+
+					2.2.2.15. min(string):
+					--------------------
+						- This method will return the minimum item from the given string/list.
+						- It will return minimum from string as per it's ASCII value
+						-  syntax:    min(string,*iterables)
+
+						e.g:
+							a=[1,2,3,4,5]
+							b="Zzxyabcde"
+							c=min(a)    		#5
+							d=min(b)    		#Z as per ASCII table   
+							print(c,d)  		#5, Z
 
 
 						 
