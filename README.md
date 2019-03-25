@@ -673,7 +673,37 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						a=[2,3,4,2,1,5,8]
 						a.clear()      		#  empty list []
 						print (a)			#  []
+
+			2.3.2. LIST SLICING
+			--------------------
+				- It is the process of extracting the specific elements from the list.
+				- In python we have two type of indexing,
 					
+					1) Positive indexing starts from left to right with 0,1,2,3,...
+					2) Negative indexing starts from right to left with -1,-2,-3,...
+				
+				- In slicing, positive and negative indexing can be used seperately or combining both.
+
+				- syntax : <list>	[start_index:end_index:step_size]
+					default values is,
+							start_index=0
+							end_index= till last element(i.e. -1)
+							step_size=1
+
+				- Note: end_index is exlusive limit (i.e. (end_index-1))
+
+				e.g:
+					a=[1,2,3,"jagan",[4,5,[6,7,8]],9,10]
+					print(a[::])        #[1, 2, 3, 'jagan', [4, 5, [6, 7, 8]], 9, 10]
+					print(a[::-1])      #reversed [10, 9, [4, 5, [6, 7, 8]], 'jagan', 3, 2, 1]
+					print(a[::-2])      # [10, [4, 5, [6, 7, 8]], 3, 1]
+					print(a[::2])       #[1, 3, [4, 5, [6, 7, 8]], 10]
+					print (a[:3])       #[1, 2, 3]
+					print (a[3][:3])    #'jag'
+					print(a[4][2])      #[6,7,8]
+					print (a[:-3:-1])   #[10, 9]
+					print (a[:2:-1])   #[10, 9, [4, 5, [6, 7, 8]], 'jagan']
+
 
 
 
