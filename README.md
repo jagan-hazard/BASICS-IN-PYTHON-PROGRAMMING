@@ -388,59 +388,6 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							b=len(a)    		#10
 							print(b)  	
 
-					2.2.2.20. len(string):
-					----------------------
-						- This method will return the length of the string.
-						- syntax:    len(string)
-
-						e.g:
-							a="9876543210"
-							b=len(a)    		#10
-							print(b)  	
-
-					2.2.2.20. len(string):
-					---------------------------
-						- This method will return the length of the string.
-						- syntax:    len(string)
-
-						e.g:
-							a="9876543210"
-							b=len(a)    		#10
-							print(b)  	
-
-					2.2.2.20. len(string):
-					---------------------------
-						- This method will return the length of the string.
-						- syntax:    len(string)
-
-						e.g:
-							a="9876543210"
-							b=len(a)    		#10
-							print(b)  	
-
-					2.2.2.20. len(string):
-					---------------------------
-						- This method will return the length of the string.
-						- syntax:    len(string)
-
-						e.g:
-							a="9876543210"
-							b=len(a)    		#10
-							print(b)  																																			
-
-					2.2.2.21. find("string",start_index,ending_index):
-					------------------------------------------------
-						- This method will return lowest index of a string in the given string provided between starting and ending index.
-						- If it doesn't find the index, it will return -1.
-						-  syntax:    <string_var_name>.find("string",start_index,ending_index)
-
-						e.g:
-							a="my name is my pYTHON"
-							b=a.find("my")        # b=0
-							c=a.find("my",0,20)   # c=0
-							d=a.find("my",5,20)   # d=11
-							print(b,c,d)           # gives 0,0,11
-
 					2.2.2.21. find("string",start_index,ending_index):
 					------------------------------------------------
 						- This method will return lowest index of a string in the given string provided between starting and ending index.
@@ -705,10 +652,103 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 					print (a[:2:-1])   #[10, 9, [4, 5, [6, 7, 8]], 'jagan']
 
 
+		2.4. TUPLES:
+		------------
+			- Tuple is consist of sequence of elements which may contain different datatypes.
+			- It is immutable object object. Most of it's operation is similar to list.
+			- Indexing/slicing is similar to list.
+			- It can be used in a function as return value thus it will return multiple values(since function can return single value only).
 
+			e.g:
 
+				a=()  		   # to create empty empty typle
+				b=(5)  		   # it is not a tuple, it is a integer.
+			  - To create tuple with single value, we need to add ',' after single value
+				b=(5,)         # it is a tuple	
+				c=(5,4,3,2,1)
 
+			- It is not as flexible as list. It has less built in methods compared to list.
 
+			2.4.1.Tuple Methods:
+			--------------------
+				2.4.1.1 tuple(<string/list/dictionary>)
+				----------------------------------------
+					- this method will convert the given string/list/dictionary into tuple.
+					- for dictionary, only key values are taken and formed as list.
+					- syntax: tuple(<string/list/dictionary>)	
+
+					e.g:
+						a="jagan"
+						b=['j','a',66,'g']
+						c={1:10,2:20,3:30,'j':40}
+						x=tuple(a)              # ('j', 'a', 'g', 'a', 'n')
+						y=tuple(b)              # ('j', 'a', 66 , 'g')
+						z=tuple(c)              # (1, 2, 3,'j')
+						print (x,y,z)
+
+				2.4.1.2. count(<element>)
+				---------------------------
+					- this method will return number of occurance of the given element in a tuple.
+					- If the element is not found, it return zero.
+					- syntax: <tuple>.count(<element>)	
+
+					e.g:
+						a=(1,2,1,2,2,3,4,2)
+						b=a.count(2)		# b=4
+						print (b)           
+
+				2.4.1.3. index(<element>)
+				--------------------------
+					- this method will return index of first occurance of the given element.
+					- If the element is not found, it will throw error.
+					- syntax: <tuple>.index(<element>)	
+					e.g:
+						a=(1,2,1,2,3,4)
+						b=a.index(2)		# index posisiton 1
+						print (b)           #  b=1
+
+				2.4.1.4. len(<tuple>)
+				----------------------------------------
+					- this method will return the number of element present in the tuple.
+					- syntax: len(<tuple>)	
+					e.g:
+						a=(1,2,3,4,"python",34,[3,5,6])
+						b=len(a)              # 7 
+						print (b)
+
+				2.4.1.5. min(<tuple>)
+				---------------------
+					- this method will return the minimum element in the tuple.
+					- All the elements in the tuple must be of same datatype.
+					- syntax: min(<tuple>)	
+					e.g:
+						a=('p','y','t','h','o','n')
+						b=(1,2,3,4,5,6)
+						x=min(a)              # 'h' 
+						y=min(b)              #  1
+						print (x,y)
+
+				2.4.1.6. max(<tuple>)
+				--------------------
+					- this method will return the maximum element in the tuple.
+					- All the elements in the tuple must be of same datatype.
+					- syntax: max(<tuple>)	
+					e.g:
+						a=('p','y','t','h','o','n')
+						b=(1,2,3,4,5,6)
+						x=max(a)              # 'y' 
+						y=max(b)              #  6
+						print (x,y)
+
+				2.4.1.7. reversed(<tuple>)
+				---------------------------
+					- tuple don't have reverse() unlike list.
+					- this method will simply reverse the tuple without sorting it as a object (not as a tuple).
+					- syntax: reversed(<tuple>)	
+					e.g:
+						a=2,3,4,2,1,5,8)
+						b=reversed(a)
+						print (b)           #  object containing (8, 5, 1, 2, 4, 3, 2)
 
 
 
