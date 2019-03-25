@@ -441,3 +441,102 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							d=a.find("my",5,20)   # d=11
 							print(b,c,d)           # gives 0,0,11
 
+					2.2.2.21. find("string",start_index,ending_index):
+					------------------------------------------------
+						- This method will return lowest index of a string in the given string provided between starting and ending index.
+						- If it doesn't find the index, it will return -1.
+						-  syntax:    <string_var_name>.find("string",start_index,ending_index)
+
+						e.g:
+							a="my name is my pYTHON"
+							b=a.find("my")        # b=0
+							c=a.find("my",0,20)   # c=0
+							d=a.find("my",5,20)   # d=11
+							print(b,c,d)           # gives 0,0,11
+
+					2.2.2.22. replace(old,new,number_of_times_to_replace):
+					------------------------------------------------
+						- This method will return lowest index of a string in the given string provided between starting and ending index.
+						- If it doesn't find the charecter, it won't replace but it will simply return the string.
+						-  syntax:    <string_var_name>.replace(old,new,number_of_times_to_replace)
+
+						e.g:
+							a="python is best. python is awesome"
+							b=a.replace('p','P')          # "Python is best. Python is awesome"
+							c=a.replace('p','P',1)        # "Python is best. python is awesome"
+							print(b,"\n",c)           
+
+
+					2.2.2.23. rfind("string",start_index,ending_index):
+					------------------------------------------------
+						- This method will return highest index of a string in the given string provided between starting and ending index (it's a kind of finding the string from reverse).
+						- If it doesn't find the index, it will return -1.
+						-  syntax:    <string_var_name>.find("string",start_index,ending_index)
+
+						e.g:
+							a="my name is my pYTHON"
+							b=a.rfind("my")        # b=11
+							c=a.rfind("my",0,20)   # c=11
+							d=a.find("my",5,20)    # d=11
+							print(b,c,d)           # gives 11,11,11
+
+					2.2.2.24. rindex("string",start_index,ending_index):
+					------------------------------------------------
+						- This method will return highest index of a string in the given string provided between starting and ending index (it's a kind of finding the string from reverse).
+						- If it doesn't find the index, it will through error.
+						-  syntax:    <string_var_name>.rindex("string",start_index,ending_index)
+
+						e.g:
+							a="my name is pYTHON"
+							b=a.rindex("my")        # b=0
+							c=a.rindex("my",0,20)   # c=0
+							d=a.rindex("my",5,20)    # d=error
+							print(b,c,d)           # gives 0,0,error
+
+		2.3. LIST:
+		----------
+			- Lists (also array in some language) in python is declared by enclosing the elemnts inside "[]".
+			- Lists can hold mutiple datatypes inside it and it also supports multidimension lists.
+			- As we know python is dynamic typing language, it is not necessary to mention the size of a list.
+
+			e.g:
+
+				a=[]  									# to create empty list
+				b=[1,2,4,"jagan",{1:20,2:30}] 			# list contains different datatypes
+				c=[1,2,[3,4,[5,6,7]],8,9]				# multi dimensional list
+
+
+			2.3.1. LIST METHODS:
+			--------------------
+
+				2.3.1.1. list(<string/tuple/dictionary>)
+				----------------------------------------
+					- this method will convert the given string/tuple/dictionary into list.
+					- for dictionary, only key values are taken and formed as list.
+					- syntax: list(<string/tuple/dictionary>)	
+					e.g:
+						a="jagan"
+						b=('j','a',66,'g')
+						c={1:10,2:20,3:30,'j':40}
+						x=list(a)              # ['j', 'a', 'g', 'a', 'n'] 
+						y=list(b)              # ['j', 'a', 66 , 'g'] 
+						z=list(c)              # [1, 2, 3,'j']
+						print (x,y,z)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
