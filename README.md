@@ -750,13 +750,26 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						b=reversed(a)
 						print (b)           #  object containing (8, 5, 1, 2, 4, 3, 2)
 
+		2.5. DICTIONARY:
+		----------------
+			- It is an unordered collection of items.
+			- Each item in a dictionary has a key and each key is associated with a value.
+			- It doesn't have any order hence it doesn't have index.
+			- Items are referred as keys.
+			- syntax {key1:value1,key2:value2,....}
+			- To add an item into the dictionary,
+					dict_name[key]	= value
+			- To delete an item to the dictionary,
+					del dict_name[key]
 
-
-
-
-
-
-
-
-
-
+			
+			e.g:
+				dict1={}  									 # empty dictionary
+				dict2={'A':10,'B':20,'C':30,'D':40,'E':50}   # A,B,C,D,E are keys & 10,20,30,40,50 are values.
+				print(dict2['C'])   						 # to get value for the key 'C'
+				dict2['C']=25								 # to assign the value for the key 'C'
+				print (dict2)								 # {'A': 10, 'B': 20, 'C': 25, 'D': 40, 'E': 50}
+				dict2['F']=60								 # to add a new key and the value
+				print (dict2)								 # {'A': 10, 'B': 20, 'C': 25, 'D': 40, 'E': 50, 'F': 60}
+				del dict2['F']								 # Delete an item from dictionary
+				print (dict2)								 # {'A': 10, 'B': 20, 'C': 25, 'D': 40, 'E': 50}
