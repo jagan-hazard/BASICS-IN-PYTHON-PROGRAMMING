@@ -179,18 +179,15 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							d=a.count("my",5,20)   # d=1
 							print(b,c,d)           # gives 2,2,1
 
-					2.2.2.6. find("string",start_index,ending_index):
-					------------------------------------------------
-						- This method will return lowest index of a string in the given string provided between starting and ending index.
-						- If it doesn't find the index, it will return -1.
-						-  syntax:    <string_var_name>.find("string",start_index,ending_index)
+					2.2.2.6. swapcase():
+					--------------------
+						- This method will return the string by swaping the case of the input string.
+						-  syntax:    <string_var_name>.swapcase()
 
 						e.g:
-							a="my name is my pYTHON"
-							b=a.find("my")        # b=0
-							c=a.find("my",0,20)   # c=0
-							d=a.find("my",5,20)   # d=11
-							print(b,c,d)           # gives 0,0,11
+							a="jAGAN1234"
+							b=a.swapcase()        # "Jagan1234"
+							print(b)           
 
 					2.2.2.7. index("string",start_index,ending_index):
 					------------------------------------------------
@@ -339,7 +336,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							d=a.split('-',5)    	#split happen for 5 times only
 							print(c,d)  			#['9','8','7','6','5','4','3','2','1','0'],['9','8','7','6','5','4-3-2-1-0']
 
-					2.2.2.15. join(string):
+					2.2.2.16. join(string):
 					-----------------------
 						- This method will join the given list(all element must be string) or string into a string with delimiter in it.
 						-  syntax:    <delimiter>.join(string/list)
@@ -350,22 +347,97 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							c='-'.join(a)    		#"9-8-7-6-5-4-3-2-1-0"
 							d='-'.join(b)           #"9-8-7-6-5-4-3-2-1-0"
 							print(c,d)  
-						 
 
+					2.2.2.17. strip(<charecter>):
+					---------------------------
+						- This method will remove all leading and trailing charecter only as specified in argument.
+						- syntax:    <string>.strip(<charecter>)
 
+						e.g:
+							a="--98765--43210--"
+							b=a.strip('-')    		#"98765--43210"
+							print(b)  
 
+					2.2.2.18. lstrip(delimiter):
+					---------------------------
+						- This method will remove all leading charecter only as specified in argument.
+						- syntax:    <string>.lstrip(<charecter>)
 
+						e.g:
+							a="--98765--43210--"
+							b=a.lstrip('-')    		#"98765--43210--"
+							print(b)  
 
+					2.2.2.19. rstrip(delimiter):
+					---------------------------
+						- This method will remove all trailing charecter only as specified in argument.
+						- syntax:    <string>.rstrip(<charecter>)
 
+						e.g:
+							a="--98765--43210--"
+							b=a.strip('-')    		#"--98765--43210"
+							print(b)  
 
+					2.2.2.20. len(string):
+					----------------------
+						- This method will return the length of the string.
+						- syntax:    len(string)
 
+						e.g:
+							a="9876543210"
+							b=len(a)    		#10
+							print(b)  	
 
+					2.2.2.20. len(string):
+					----------------------
+						- This method will return the length of the string.
+						- syntax:    len(string)
 
+						e.g:
+							a="9876543210"
+							b=len(a)    		#10
+							print(b)  	
 
+					2.2.2.20. len(string):
+					---------------------------
+						- This method will return the length of the string.
+						- syntax:    len(string)
 
+						e.g:
+							a="9876543210"
+							b=len(a)    		#10
+							print(b)  	
 
+					2.2.2.20. len(string):
+					---------------------------
+						- This method will return the length of the string.
+						- syntax:    len(string)
 
+						e.g:
+							a="9876543210"
+							b=len(a)    		#10
+							print(b)  	
 
+					2.2.2.20. len(string):
+					---------------------------
+						- This method will return the length of the string.
+						- syntax:    len(string)
 
+						e.g:
+							a="9876543210"
+							b=len(a)    		#10
+							print(b)  																																			
 
+					2.2.2.21. find("string",start_index,ending_index):
+					------------------------------------------------
+						- This method will return lowest index of a string in the given string provided between starting and ending index.
+						- If it doesn't find the index, it will return -1.
+						-  syntax:    <string_var_name>.find("string",start_index,ending_index)
+
+						e.g:
+							a="my name is my pYTHON"
+							b=a.find("my")        # b=0
+							c=a.find("my",0,20)   # c=0
+							d=a.find("my",5,20)   # d=11
+							print(b,c,d)           # gives 0,0,11
 
