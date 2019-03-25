@@ -303,7 +303,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							print(c,d)           # gives True, False
 
 					2.2.2.14. max(string,*iterables):
-					--------------------
+					---------------------------------
 						- This method will return the maximum item from the given string/list.
 						- It will return maximum from string as per it's ASCII value
 						-  syntax:    max(string,*iterables)
@@ -315,8 +315,8 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							d=max(b)    		#z as per ASCII table   
 							print(c,d)  		#5, z
 
-					2.2.2.15. min(string):
-					--------------------
+					2.2.2.15. min(string,*iterables):
+					---------------------------------
 						- This method will return the minimum item from the given string/list.
 						- It will return minimum from string as per it's ASCII value
 						-  syntax:    min(string,*iterables)
@@ -328,7 +328,28 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							d=min(b)    		#Z as per ASCII table   
 							print(c,d)  		#5, Z
 
+					2.2.2.15. split(delimiter):
+					---------------------------
+						- This method will split the given string into list as per the given delimiter and number of times the split will happen.
+						-  syntax:    <string>.split(delimiter,number_of_times_split_to_happen)
 
+						e.g:
+							a="9-8-7-6-5-4-3-2-1-0"
+							c=a.split('-')    		#split all the elements
+							d=a.split('-',5)    	#split happen for 5 times only
+							print(c,d)  			#['9','8','7','6','5','4','3','2','1','0'],['9','8','7','6','5','4-3-2-1-0']
+
+					2.2.2.15. join(string):
+					-----------------------
+						- This method will join the given list(all element must be string) or string into a string with delimiter in it.
+						-  syntax:    <delimiter>.join(string/list)
+
+						e.g:
+							a=['9','8','7','6','5','4','3','2','1','0']
+							b="9876543210"
+							c='-'.join(a)    		#"9-8-7-6-5-4-3-2-1-0"
+							d='-'.join(b)           #"9-8-7-6-5-4-3-2-1-0"
+							print(c,d)  
 						 
 
 
