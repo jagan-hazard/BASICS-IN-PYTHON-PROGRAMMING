@@ -570,3 +570,123 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						a.append("jagan")			# [1,2,3,4,[5,6,7],"jagan"]
 						a.append({1:50,2:100})		# [1,2,3,4,[5,6,7],"jagan",{1:50,2:100}]
 						print (a)
+
+				2.3.1.6. extend(<list>)
+				----------------------------------------
+					- this method will extend one list with another list.
+					- syntax: <list1>.extend(<list2>)	
+					e.g:
+						a=[1,2,3]
+						b=[4,5,"jagan"]
+						a.extend(b)		# [1,2,3,4,5,"jagan"]
+						print (a)
+
+				2.3.1.7. insert(<index>,<element>)
+				----------------------------------------
+					- this method will insert the given element in given position into the list.
+					- If the index went out of bound, then the element is appended at the end.
+					- syntax: <list1>.insert(<index>,<element>)	
+					e.g:
+						a=[1,2,3,4,5,6]
+						a.insert(3,0)    # [1,2,3,0,4,5,6]
+						a.insert(10,7)	 # [1,2,3,0,4,5,6,7]
+						print (a)
+
+				2.3.1.8. remove(<element>)
+				----------------------------------------
+					- this method will remove the given element from the list from index 0 to n. (It will do for only once).
+					- syntax: <list1>.remove(<element>)	
+					e.g:
+						a=[1,2,1,2,3]
+						a.remove(1)  #[2,1,2,3]
+						print (a)
+
+
+				2.3.1.9. pop(<position>)
+				----------------------------------------
+					- this method will pop out the element from the given position.
+					- the element is removed from the original list and returned.
+					- If the index is not found, it will throw error
+					- syntax: <list1>.pop(<position>)	
+					e.g:
+						a=[1,2,3,4,5]
+						b=a.pop(2)		# a=[1,2,4,5]
+						print (b)       # 3
+
+				2.3.1.10. index(<element>)
+				----------------------------------------
+					- this method will return index of first occurance of the given element.
+					- If the element is not found, it will throw error.
+					- syntax: <list1>.index(<element>)	
+					e.g:
+						a=[1,2,1,2,3,4]
+						b=a.index(2)		# index posisiton 1
+						print (b)           #  b=1
+
+				2.3.1.11. count(<element>)
+				----------------------------------------
+					- this method will return number of occurance of the given element in a list.
+					- If the element is not found, it return zero.
+					- syntax: <list1>.count(<element>)	
+
+					e.g:
+						a=[1,2,1,2,2,3,4,2]
+						b=a.count(2)		# b=4
+						print (b)           
+
+				2.3.1.12. sort(<key>,<reverse=True/False>)
+				----------------------------------------
+					- this method will sort the elements in the list, by default it will sort by ascending order.
+					- If the reverse=True, it will sort in reverse order.
+					- syntax: <list1>.sort(<key>,<reverse=True/False>)	
+					e.g:
+						a=[2,3,4,2,1,5,8]
+						a.sort()		# sort in ascending order
+						print (a)           #  [1, 2, 2, 3, 4, 5, 8]
+						a.sort(reverse=True)		# sort in decending order
+						print (a)           #  [8, 5, 4, 3, 2, 2, 1]
+
+				2.3.1.13. reverse()
+				-------------------
+					- this method will simply reverse the list without sorting it.
+					- syntax: <list1>.reverse()	
+					e.g:
+						a=[2,3,4,2,1,5,8]
+						a.reverse()
+						print (b)           #  [8, 5, 1, 2, 4, 3, 2]
+
+				2.3.1.14. copy()
+				----------------
+					- this method will do complete copy of the list and returns it.
+					- syntax: <list1>.copy()	
+					e.g:
+						a=[2,3,4,2,1,5,8]
+						b=a.copy()			# b=[2,3,4,2,1,5,8]
+						a.clear()      		#  empty list []
+						print (b,a)			# [2,3,4,2,1,5,8] , []
+
+				2.3.1.14. clear()
+				----------------------------------------
+					- this method will clear all the elements in a list.
+					- syntax: <list1>.clear()	
+					e.g:
+						a=[2,3,4,2,1,5,8]
+						a.clear()      		#  empty list []
+						print (a)			#  []
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
