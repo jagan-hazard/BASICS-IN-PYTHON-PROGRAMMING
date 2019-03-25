@@ -773,3 +773,61 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 				print (dict2)								 # {'A': 10, 'B': 20, 'C': 25, 'D': 40, 'E': 50, 'F': 60}
 				del dict2['F']								 # Delete an item from dictionary
 				print (dict2)								 # {'A': 10, 'B': 20, 'C': 25, 'D': 40, 'E': 50}
+
+			2.5.1. Dictionary Methods
+			--------------------------
+				2.5.1.1. len(<dict>)
+				----------------------------------------
+					- this method will return the number of element(as keys) present in the dictionary.
+					- syntax: len(<dict>)	
+					e.g:
+						a={'A':10,'B':20,'C':30,'D':40,'E':50}
+						b=len(a)              # 5 
+						print (b)
+
+				2.5.1.2. str(<dict>)
+				---------------------
+					- this method will convert the dictionary into string.
+					- this will convert the charecter including {,',: as str.
+					- syntax: str(<dict>)	
+					e.g:
+						a={'A':10,'B':20,'C':30,'D':40,'E':50}
+						b=str(a)              # 5 
+						print (b)			  # "{'A' : 10, 'B' : 20, 'C' : 30, 'D' : 40, 'E' : 50}"  it adds space as well.
+
+				2.5.1.3. clear()
+				----------------
+					- this method will clear all the entry from dictionary.
+					- syntax: <dict>.clear()	
+					e.g:
+						a={'A':10,'B':20,'C':30,'D':40,'E':50}
+						a.clear()              					# It will clear all the elements.
+						print (a)			  					# empty dict
+
+				2.5.1.4. copy()
+				----------------
+					- this method will deep copy the complete dictionary.
+					- syntax: <dict>.copy()	
+					e.g:
+						a={'A':10,'B':20,'C':30,'D':40,'E':50}
+						b=a.copy()            # b={'A':10,'B':20,'C':30,'D':40,'E':50}
+						a.clear()			  # a={}	
+						print(a) 			  
+						print (b)			  # b={'A':10,'B':20,'C':30,'D':40,'E':50}
+
+				
+				2.5.1.5. get(<key>,default=None)
+				----------------------------------------
+					- this method will return the value for given key value.
+					- If the key is not found, it will return None. If needed we can modify the error message from default statement.
+					- It is similar to <dict>[key].(If key value not found, it will show error)
+					- syntax: <dict>.get(<key>,default=None)
+
+					e.g:
+						a={'A':10,'B':20,'C':30,'D':40,'E':50}
+						b=a.get('C')	# get the value for key 'C'
+						c=a['C']        # another way 
+						d=a.get('J')    # return None
+						e=a['J']        # return error
+						f=a.get('J',"key not found")    # return specific msg
+						print (b,"\n",c,"\n",d,"\n",e,"\n",f)
