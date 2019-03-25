@@ -511,6 +511,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 
 				2.3.1.1. list(<string/tuple/dictionary>)
 				----------------------------------------
+					- List is a mutable object.
 					- this method will convert the given string/tuple/dictionary into list.
 					- for dictionary, only key values are taken and formed as list.
 					- syntax: list(<string/tuple/dictionary>)	
@@ -523,20 +524,49 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						z=list(c)              # [1, 2, 3,'j']
 						print (x,y,z)
 
+				2.3.1.2. len(<list>)
+				----------------------------------------
+					- this method will return the number of element present in the list.
+					- syntax: len(<list>)	
+					e.g:
+						a=[1,2,3,4,"python",34,[3,5,6]]
+						b=len(a)              # 7 
+						print (b)
 
+				2.3.1.3. min(<list>)
+				--------------------
+					- this method will return the minimum element in the list.
+					- All the elements in the list must be of same datatype.
+					- syntax: min(<list>)	
+					e.g:
+						a=['p','y','t','h','o','n']
+						b=[1,2,3,4,5,6]
+						x=min(a)              # 'h' 
+						y=min(b)              #  1
+						print (x,y)
 
+				2.3.1.4. max(<list>)
+				--------------------
+					- this method will return the maximum element in the list.
+					- All the elements in the list must be of same datatype.
+					- syntax: max(<list>)	
+					e.g:
+						a=['p','y','t','h','o','n']
+						b=[1,2,3,4,5,6]
+						x=max(a)              # 'y' 
+						y=max(b)              #  6
+						print (x,y)
 
+				2.3.1.5. append(<element>)
+				----------------------------------------
+					- this method will append the element at the end of list.
+					- The elements are added as last element, it won't check for duplication. whatever passed as argument it will add to the list.
+					- syntax: <list>.append(<element>)	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+					e.g:
+						a=[1,2,3]
+						a.append(4)  				# [1,2,3,4]
+						a.append([5,6,7])			# [1,2,3,4,[5,6,7]]
+						a.append("jagan")			# [1,2,3,4,[5,6,7],"jagan"]
+						a.append({1:50,2:100})		# [1,2,3,4,[5,6,7],"jagan",{1:50,2:100}]
+						print (a)
