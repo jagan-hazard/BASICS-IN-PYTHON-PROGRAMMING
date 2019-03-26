@@ -121,6 +121,22 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 					b=a*2
 					print (b)  # will give "jaganjagan"
 
+			2.2.2.1.3. string formating:
+			-------------------------------
+				- It is the way to format the string using .format().
+				- plcae holders {} are used to fetch respective component. Numbering the place holder is optional. It starts with {0},{1},..
+				-  Place holder format:  {[Position]:[Width].[precision][type]}
+						position  - position of the placeholder
+						width     - how many minimum space needed
+						precision - how many digits to retail
+						type      - integer(d),float(f),string(s)
+					-If the precision is higher than input then it will do padding(adds the digit (12300000000...)).
+
+				e.g:
+					a=23456.7890123
+					print("val 1={0:2.2f},\t val 2={1:.8f}".format(a,a))   #val 1=23456.79,  val 2=23456.7890123000
+
+
 			2.2.2.2. Commonly used methods in strings:
 			----------------------------------------
 				- Since string is immutable object, most of the methods in string returns a value without altering the original variable.
@@ -1231,7 +1247,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 				c=sum(a,3)    # 15+3
 				print(b,c)    # 15 18
 		
-		2.3.16. zip(<iterable1,iterable2,iterable3,>)				
+		2.3.24. zip(<iterable1,iterable2,iterable3,>)				
 		---------------------------------------------
 			- This method will merge the multiple iterables as per their index into a tuples and created into an object.
 			- the merge will happen for the iterables having least number of elements. 
@@ -1245,7 +1261,15 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 				d=list(zip(a,b,c))      				# object converted into list
 				print(d)                				# [(1, 'terry', 9), (2, 'drogba', 10), (3, 'hazard', 9)]
 			
-				
+		2.3.25. print(<string+formatting>)				
+		----------------------------------
+			- This method will print the given statement along with formatting if given (similar to printf in C).
+			- syntax: print(<string+formatting>)
+			e.g:
+				a=[5,4,3,2,1]
+				print("Python is better programming language")          #Python is better programming language
+				print("element 1:{4},element 2:{3},element 3:{2},element 4:{1},element 5:{0}".format(a[0],a[1],a[2],a[3],a[4]))  										#element 1:1,element 2:2,element 3:3,element 4:4,element 5:5
+
 				
 
 
