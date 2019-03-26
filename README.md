@@ -1044,8 +1044,24 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 				print(b)					# True
 				c=hasattr(coordinate,'p')
 				print(c)					# False
+
+		2.3.10. setattr(<object>,<attribute_name>)				
+		-----------------------------------------
+			- This method is used to set value for the given attribute in the object.
+			- If the attribute is not present, then this function will create the attribute and set the value.
+			- syntax: setattr(<object>,<attribute_name>,<attribute_value>)
+			e.g:
+				class coordinate:
+				    x=10
+				    z=2
+				print(coordinate.x)					# x=10
+				setattr(coordinate,'x',5)			
+				print(coordinate.x)					# x=5
+				setattr(coordinate,'y',3)			# create y and set y=3
+				print(coordinate.y)					# y=3
+				
 		
-		2.3.10. hex(<integer>)				
+		2.3.11. hex(<integer>)				
 		---------------------
 			- This method will convert an integer (non-float values) into hexadecimal value.
 			- syntax: hex(<integer>)
@@ -1056,7 +1072,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 				d=hex(20.55)				# error
 				print(a,b,c)  				# 0x1b3 0x0 -0x22
 
-		2.3.11. oct(<integer>)				
+		2.3.12. oct(<integer>)				
 		---------------------
 			- This method will convert an integer (non-float values) into octal value.
 			- syntax: oct(<integer>)
@@ -1067,7 +1083,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 				d=oct(20.55)				# error
 				print(a,b,c)  				# 0o663 0o0 -0o42
 
-		2.3.12. int(<string>)				
+		2.3.13. int(<string>)				
 		---------------------
 			- This method will convert an string numeric(0-9, non-float) into integer.
 			- syntax: int(<string>)
@@ -1078,7 +1094,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 				d=int('pyt-34')             # error
 				print(a,c)                  # 435 -34
 		
-		2.3.13. input(<string>)				
+		2.3.14. input(<string>)				
 		---------------------
 			- This method will get and return input (as a string) from the user (similar to scanf in C).
 			- syntax: input(<string>)
@@ -1087,7 +1103,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 				print (a)					# user pressed value (as a string)
 		
 
-		2.3.14. iter(<iterable>)				
+		2.3.15. iter(<iterable>)				
 		------------------------
 			- This method will create an object which is iterated one element at a time.
 			- string/list/tuples is not an iterator by default, we need to use iter(<iterator>) function for converting string/list/tuples into iterator.
@@ -1097,7 +1113,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 				x=len(a)
 				a=iter(a)   # must 
 
-		2.3.15. next(<iterable>)				
+		2.3.16. next(<iterable>)				
 		-------------------------
 			- This method will return the next item from the iterable object.
 			- string/list/tuples is not an iterator by default, we need to use iter(<iterator>) function for converting string/list/tuples into iterator.
@@ -1110,3 +1126,127 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 				for i in range(0,x):
 				    print (next(a))         # p y t h o n
 	
+
+		2.3.17. pow(<val1>,<val2>)				
+		-------------------------
+			- This method will return val1 to the power of val2.
+			- It is same as val1**val2.
+			- syntax: pow(<val1>,<val2>)
+			e.g:
+				a=pow(2,8)
+				print(a)  		# 256
+				b=2**8
+				print(b)		# 256
+
+		2.3.18. range(<start_val>,<stop_val>,<step_size>)				
+		-------------------------------------------------
+			- This method will iterate the values from given range
+			- If start value is not given, then it starts from 0.
+			- To go back in negative values, step size must be included and must be negative.
+			- Stop_value is exclusive limit (i.e. stop_value-1).
+			- syntax: range(<start_val>,<stop_val>,<step_size>)
+			
+			e.g:
+				a=list(range(10))				# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+				b=list(range(1,10))				# [1, 2, 3, 4, 5, 6, 7, 8, 9]
+				c=list(range(1,10,2))			# [1, 3, 5, 7, 9]
+				d=list(range(5,-5))     		# empty list
+				e=list(range(5,-5,-1))			# [5, 4, 3, 2, 1, 0, -1, -2, -3, -4]
+				print(a,b,c,d,e)
+
+		2.3.19. reversed(<list/tuple/string>)				
+		-------------------------------------------------
+			- This method will create an object containing reverse of the given iterables without sorting it.
+			- syntax: reversed(<list/tuple/string>)
+			
+			e.g:
+				a=[5,4,3,2,1]
+				#a="jagan"
+				b=reversed(a)                   # object
+				c=list(reversed(a))             # list of reversed input
+				print(b,c)
+
+		2.3.20. round(<integer>)				
+		-------------------------------------------------
+			- This method will roundoff the given interger.
+			- syntax: round(<integer>)
+			
+			e.g:
+				a=round(5.34)			# 5
+				b=round(5/4)			# 1
+				c=round(-6.78)			# -7
+				print(a,b,c)
+				
+		2.3.21. slice(<start>,<stop>,<step>)				
+		------------------------------------
+			- This method will create an slice object containing elements within the specific range.
+			- syntax: slice(<start>,<stop>,<step>)
+			
+			e.g:
+				a=[5,4,3,2,1]
+				b=slice(3)          # object slice(None, 3, None)
+				c=slice(0,4,2)      # object slice(0, 4, 2)
+				d=a[b]              # [5, 4, 3]
+				e=a[c]              # [5, 3]
+				print(d,e)
+
+		2.3.22. reversed(<list/tuple/string>)				
+		-------------------------------------------------
+			- This method will create an object containing reverse of the given iterables without sorting it.
+			- syntax: reversed(<list/tuple/string>)
+			
+			e.g:
+				a=[5,4,3,2,1]
+				#a="jagan"
+				b=reversed(a)                   # object
+				c=list(reversed(a))             # list of reversed input
+				print(b,c)
+		
+		2.3.22. sorted(<iterable>,(<key>,<reverse>))				
+		-------------------------------------------------
+			- This method will sort an iterable ascending,desending,reverse or as per key function.
+			- syntax: sorted(<iterable>,(<key>,<reverse>))
+			
+			e.g:				
+				def key1(elem):
+				    return elem[2]
+
+				a=[(1,2,3),(2,3,4),(2,2,1),(3,4,5),(4,5,6)]
+				b=sorted(a)
+				print(b)                     # [(1, 2, 3), (2, 2, 1), (2, 3, 4), (3, 4, 5), (4, 5, 6)]
+				c=sorted(a,reverse=True)     # sort and reverse it
+				print(c)                     # [(4, 5, 6), (3, 4, 5), (2, 3, 4), (2, 2, 1), (1, 2, 3)]
+				d=sorted(a,key=key1)         # sort as per 3rd element
+				print(d)                     # [(2, 2, 1), (1, 2, 3), (2, 3, 4), (3, 4, 5), (4, 5, 6)]
+
+		2.3.23. sum(<iterable>,<additional_value>)				
+		------------------------------------------
+			- This method will adds the items of iterable and return it's sum.
+			- additional_value is optional. If provided, it adds this value to result and returns it.
+			- The iterable must be in integer type.
+			- syntax: sum(<iterable>,<additional_value>)
+			e.g:
+				a=[1,2,3,4,5]
+				b=sum(a)      # 15
+				c=sum(a,3)    # 15+3
+				print(b,c)    # 15 18
+		
+		2.3.16. zip(<iterable1,iterable2,iterable3,>)				
+		---------------------------------------------
+			- This method will merge the multiple iterables as per their index into a tuples and created into an object.
+			- the merge will happen for the iterables having least number of elements. 
+			- if the last iterable reached further doing next() will result in error.
+			- syntax: zip(<iterable1,iterable2,iterable3,>)
+			e.g:
+				a=(1,2,3,4)                             # length =4
+				b=["terry","drogba","hazard","torres"]  # length =4
+				c=(9,10,9)             					# length =3
+				e=zip(a,b,c)            				# object alone
+				d=list(zip(a,b,c))      				# object converted into list
+				print(d)                				# [(1, 'terry', 9), (2, 'drogba', 10), (3, 'hazard', 9)]
+			
+				
+				
+
+
+
