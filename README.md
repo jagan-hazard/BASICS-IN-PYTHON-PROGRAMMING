@@ -930,19 +930,183 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 
 	2.3. Commonly used built-in Methods:
 	------------------------------------					
+		- Here we will see some of the commonly used methods.
+
+		2.3.1. abs(<value>)				
+		--------------------
+			- This method will return the absolute value (i.e. only positive results) of given integer.
+			- syntax:  abs(<value>)
+			e.g:
+				a=-101.56
+				b=abs(a)
+				print(b)		#101.56
+
+		2.3.2. bin(<value>)				
+		--------------------
+			- This method will covert integer(non-float values) into binary values.
+			- syntax:  bin(<value>)
+			e.g:
+				a=10
+				b=-101
+				print(bin(a))           # 0b1010
+				print(bin(b))           # -0b1100101
+
+		2.3.3. chr(<value>)				
+		-------------------
+			- This method will convert integer(convertable integer) into charecter.
+			- syntax: chr(<value)
+			e.g:
+				a=chr(10)				# '10'
+				print(type(a))			
+				b=chr(-101)  			# error '-'
+				print(type(b))
+				c=chr(101.5)			# error decimal value
+				print(type(c))           
+				d=chr(4/5)				# error '/'
+				print(type(d))           
+
+		2.3.4. complex (<real>,<imaginary>)				
+		-----------------------------------
+			- This method will create the  complex number given that real and imaginary values.
+			- syntax: complex(<real>,<imaginary>)
+			e.g:
+				a=complex(2,-3)
+				b=complex(-5,9)
+				print(a,b)				# (2-3j) (-5+9j)
+
+		2.3.5. delattr(<object>,<attribute_name>)				
+		-----------------------------------------
+			- This method is used to delete an atttribute from the object given both as argument.
+			- syntax: delattr(<object>,<attribute_name>)
+			e.g:
+				class coordinate:
+				    x=10
+				    y=5
+				    z=2
+
+				print(coordinate.z)   # 2
+				#del coordinate.z     # del coordinate.z   -> can also be used
+				delattr(coordinate,'z')  
+				print(coordinate.z)   # error bcz attribute deleted
+
+		2.3.6. dir(<object>)				
+		-----------------------------------
+			- This method will return the long list containing attributes of the class.
+			- syntax: dir(<object>)
+			e.g:
+				class coordinate:
+				    x=10
+				    y=5
+				    z=2
+
+				print(dir(coordinate))  # gives long list of attributes for the class
+
+		2.3.7. enumerate(<iterable>,<start=0>)				
+		--------------------------------------
+			- This method will adds counter to an iterable and returns it in tuple format (as a object).
+			- syntax: enumerate(<iterable>,<start=0>)
+			e.g:
+				a=[2,4,6,8]
+
+				for i in enumerate(a,0):
+				    print (i);  			# (0, 2) (1, 4) (2, 6) (3, 8)
+
+				for i in enumerate(a,22):
+				    print (i);  			# (22, 2) (23, 4) (24, 6) (25, 8)
+
+
+		2.3.8. getattr(<object>,<attribute_name>)				
+		-----------------------------------------
+			- This method is used to return value of an atttribute from the object given both as argument.
+			- syntax: getattr(<object>,<attribute_name>)
+			e.g:
+				class coordinate:
+				    x=10
+				    y=5
+				    z=2
+
+				b=getattr(coordinate,'y')
+				print(b)					# 5
 				
 
+		2.3.9. hasattr(<object>,<attribute_name>)				
+		-----------------------------------------
+			- This method is used to check whether the given attribute is present or not in the object.
+			- Return True, if attribute found, else return False.
+			- syntax: hasattr(<object>,<attribute_name>)
+			e.g:
+				class coordinate:
+				    x=10
+				    y=5
+				    z=2
 
+				b=hasattr(coordinate,'y')
+				print(b)					# True
+				c=hasattr(coordinate,'p')
+				print(c)					# False
+		
+		2.3.10. hex(<integer>)				
+		---------------------
+			- This method will convert an integer (non-float values) into hexadecimal value.
+			- syntax: hex(<integer>)
+			e.g:
+				a=hex(435)					# 0x1b3
+				b=hex(0)					# 0x0
+				c=hex(-34)					# -0x22
+				d=hex(20.55)				# error
+				print(a,b,c)  				# 0x1b3 0x0 -0x22
 
+		2.3.11. oct(<integer>)				
+		---------------------
+			- This method will convert an integer (non-float values) into octal value.
+			- syntax: oct(<integer>)
+			e.g:
+				a=oct(435)					# 0o663
+				b=oct(0)					# 0o0
+				c=oct(-34)					# -0o42
+				d=oct(20.55)				# error
+				print(a,b,c)  				# 0o663 0o0 -0o42
 
+		2.3.12. int(<string>)				
+		---------------------
+			- This method will convert an string numeric(0-9, non-float) into integer.
+			- syntax: int(<string>)
+			e.g:
+				a=int('435')                # 435
+				b=int('25.67')              # error
+				c=int('-34')                # -34
+				d=int('pyt-34')             # error
+				print(a,c)                  # 435 -34
+		
+		2.3.13. input(<string>)				
+		---------------------
+			- This method will get and return input (as a string) from the user (similar to scanf in C).
+			- syntax: input(<string>)
+			e.g:
+				a=input("please press any key")                
+				print (a)					# user pressed value (as a string)
+		
 
+		2.3.14. iter(<iterable>)				
+		------------------------
+			- This method will create an object which is iterated one element at a time.
+			- string/list/tuples is not an iterator by default, we need to use iter(<iterator>) function for converting string/list/tuples into iterator.
+			- syntax: iter(<iterable>)
+			e.g:
+				a="python"
+				x=len(a)
+				a=iter(a)   # must 
 
-
-
-
-
-
-
-
-
-
+		2.3.15. next(<iterable>)				
+		-------------------------
+			- This method will return the next item from the iterable object.
+			- string/list/tuples is not an iterator by default, we need to use iter(<iterator>) function for converting string/list/tuples into iterator.
+			- if the last iterable reached further doing next() will result in error.
+			- syntax: next(<iterable>)
+			e.g:
+				a="python"
+				x=len(a)
+				a=iter(a)   # must 
+				for i in range(0,x):
+				    print (next(a))         # p y t h o n
+	
