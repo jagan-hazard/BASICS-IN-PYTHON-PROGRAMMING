@@ -831,3 +831,117 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						e=a['J']        # return error
 						f=a.get('J',"key not found")    # return specific msg
 						print (b,"\n",c,"\n",d,"\n",e,"\n",f)
+
+				2.5.1.6. keys()
+				----------------
+					- this method will return the all the keys from the dictionary as a dict_keys which doesn't support indexing.
+					- This dict_keys is further converted into list using list().
+					- syntax: <dict>.keys()
+
+					e.g:
+						a={'A':10,'B':20,'C':30,'D':40,'E':50}
+						b=a.keys()
+						print (type(b))                   # <class 'dict_keys'>
+						c=list(a.keys())                  
+						print(type(c))                    # <class 'list'>
+						print(c[1])                       # 'B'
+
+
+				2.5.1.7. values()
+				----------------
+					- this method will return the all the values from the dictionary as a dict_values which doesn't support indexing.
+					- This dict_values is further converted into list using list().
+					- syntax: <dict>.values()
+
+					e.g:
+						a={'A':10,'B':20,'C':30,'D':40,'E':50}
+						b=a.values()
+						print (type(b))                   # <class 'dict_keys'>
+						c=list(a.values())                  
+						print(type(c))                    # <class 'list'>
+						print(c[1])                       # 20
+
+				2.5.1.8. items()
+				----------------
+					- this method will return the all the keys and values from the dictionary as a dict_items which doesn't support indexing.
+					- This dict_items is further converted into list using list() function.
+					- After list function, the output is a list containg seperate tuples which has each key and it's value.
+					- syntax: <dict>.items()
+
+					e.g:
+						a={'A':10,'B':20,'C':30,'D':40,'E':50}
+						b=a.items()
+						print (type(b))           # <class 'dict_items'>
+						c=list(a.items())
+						print(c)                  # [('A', 10), ('B', 20), ('C', 30), ('D', 40), ('E', 50)]
+						print (c[1])              # ('B', 20)
+						print(type(c[1]))         # <class 'tuple'>
+
+					2.5.1.8.1. Looping through key and values parallely.
+					----------------------------------------------------
+						- we can loop through key and values parallely by simple using for loop.
+
+						e.g:
+
+							for i,j in a.items():
+    							print (i,"=",j);  		# print each key and values
+
+
+				2.5.1.9. has_key(<key>) (only until python 2.6 version, removed in python 3.x)
+				-----------------------------------------------------------------------------
+					- this method will check whether the given key is present or not.
+					- return True if key is found, else return false.
+					- syntax: <dict>.has_key(<key>)
+
+					e.g:
+						a={'A':10,'B':20,'C':30,'D':40,'E':50}
+						b=a.has_key('Z')			  # python 2.x
+						c=a.has_key('C')			  # python 2.x
+						d='E' in a      			  # python 3.x
+						print (b,c)                   # False, True
+						
+					- For python 3.x versions, we can use 'in' keyword to check whether the given key is present or not. 
+
+
+				2.5.1.10. pop(<key>)
+				--------------------
+					- this method will pop the value for given key from dictionary.
+					- if key is not found, will show error.
+					- syntax: <dict>.pop(<key>)
+
+					e.g:
+						a={'A':10,'B':20,'C':30,'D':40,'E':50}
+						b=a.pop('C')
+						print(b)            # '30'
+						print(a)            # {'A': 10, 'B': 20, 'D': 40, 'E': 50}
+
+				2.5.1.11. update(<dict2>)
+				--------------------------
+					- this method will update/merge one dictionary with another.
+					- If the same key found on both dictionary, then it will update the new key value(i.e. from dict2). 
+					- syntax: <dict1>.update(<dict2>)
+
+					e.g:
+						a={'A':10,'B':20,'C':30,'D':40,'E':50}
+						b={'A':80,'B':90,'F':60,'G':70}
+						a.update(b)
+						print(b)            # {'A': 80, 'B': 90, 'F': 60, 'G': 70}
+						print(a)            # {'A': 80, 'B': 90, 'C': 30, 'D': 40, 'E': 50, 'F': 60, 'G': 70}
+
+					
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
