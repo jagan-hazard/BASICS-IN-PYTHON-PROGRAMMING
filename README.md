@@ -1269,8 +1269,127 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 				a=[5,4,3,2,1]
 				print("Python is better programming language")          #Python is better programming language
 				print("element 1:{4},element 2:{3},element 3:{2},element 4:{1},element 5:{0}".format(a[0],a[1],a[2],a[3],a[4]))  										#element 1:1,element 2:2,element 3:3,element 4:4,element 5:5
+	2.4. Conditional statements:
+	-----------------------------
+			- Python is indendation based programming. so for each hierarchy proper indendation is needed.
+			- similar to other programming language python supports 
 
-				
+					- simple if
+					- if..else
+					- if..elif..else
+					- nested if 
+
+			2.4.1. Simple if:
+			----------------
+				if (condition):    					# bracket is  not mandatory
+					statements
+					...
+
+				e.g:
+
+					if (3>1):						# bracket is  not mandatory
+						print ("Condition True")
+
+			2.4.2. if..else:
+			----------------
+				if (condition):    					# bracket is  not mandatory
+					statements
+					...
+				else:
+					statements
+					...
+
+				e.g:
+					if (3>4):						# bracket is  not mandatory
+						print ("Condition True")
+					else:
+						print ("Condition False")
+
+			2.4.3. if..elif..else:
+			----------------------
+				if (condition):    					# bracket is  not mandatory
+					statements
+					...
+				elif (condition):
+					statements
+					...
+				else:
+					statements
+					...
+
+				e.g:
+					if (3>4):						# bracket is  not mandatory
+						print ("If Condition")
+					elif (3>1):
+						print ("elif Condition")
+					else:
+						print("else Condition")
+
+	2.5. Looping:
+	-------------			
+		- Unlike other language python doen't have lot of looping statement. It has only two loop which is enough to perform all tasks. They are
+
+				- for loop
+				- while loop
+		
+		2.5.1. for loop:
+		----------------
+			- syntax:
+			---------
+					for i in (iterable):
+						statements
+						...
+						...
+
+			- In python for loop can be used in two ways.
+
+				- for loop, looping through the index of the iterables(uses range function).
+				- for loop, looping through the elements of the iterables.
+
+			2.5.1.1. Looping using values/index values.
+			-------------------------------------------
+				- This method uses the range function which will be used to loop through the iterables.
+				- This is very usefull if the looping involves lot of iterables.
+
+				e.g:
+
+					a=(1,2,3,4,5)
+					b=["hazard","kepa","rudiger","kovacic","kante"]
+					c=(10,1,2,17,7)
+					length=len(b)
+
+					for i in range(length):
+					    print("s.no:{},name:{},jersey no:{}".format(a[i],b[i],c[i]))	
+					    
+			2.5.1.2. Looping using element
+			------------------------------
+				- This method will loop through each elements in the iterables.
+				- This is very usefull if the looping involves single iterable.
+
+				e.g:
+
+					a=["hazard","kepa","rudiger","kovacic","kante"]
+					j=1
+					for i in a:
+					    print("{}.player name:{}".format(j,i))				
+					    j+=1
+
+		2.5.1. while loop:
+		------------------
+			- It is similar to while loop in other language. It is used when the limit is unknown.
+			- syntax:
+			---------
+					while (expression):
+						statements
+						...
+						...
+
+			e.g:
+
+					i=0
+					while (i<10):
+					    print(i)
+					    i+=1
 
 
 
