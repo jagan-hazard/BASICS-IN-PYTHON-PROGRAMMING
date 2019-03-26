@@ -76,7 +76,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 
 ![Screenshot](adv_data_types.png)
 
-		2.1. Numeric Data types:
+		2.2.1. Numeric Data types:
 		------------------------
 			- In python, based on the value of number python will assign the varible and allocate the memory for various numeric data type such as int, float and complex.
 
@@ -88,7 +88,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 
 				Here a is a int, b is a float, c is a complex numeric data types
 
-		2.2. Strings
+		2.2.2. Strings
 		-------------
 			- String is a sequence of charecters. It is enclosed in single quotes ('') or double quotes("").
 			- Python allows Indexing for the srings. Indexing is the process of accessing each charecter or elemet by their index.
@@ -99,9 +99,9 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 					b="""earth's climate is "hotter" than the sun""" #quotes can be used inside string(when enclosed by triple quotes)
 					print(a[2])  #will print letter "r" in variable a
 
-			2.2.1. String manipulation:
+			2.2.2.1. String manipulation:
 			--------------------------
-			2.2.1.1. string concordination(+):
+			2.2.2.1.1. string concordination(+):
 			----------------------------------
 				- It is the process of adding one string to another.
 				-  '+' is used for concordination.
@@ -111,7 +111,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 					b="nathan"
 					c=a+b
 					print (c)  # will give "jagannathan"
-			2.2.1.2. string Repetition(*):
+			2.2.2.1.2. string Repetition(*):
 			-------------------------------
 				- It is the process of repeting the strings.
 				-  '*' is used for repetition.
@@ -121,12 +121,12 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 					b=a*2
 					print (b)  # will give "jaganjagan"
 
-			2.2.2. Commonly used methods in strings:
+			2.2.2.2. Commonly used methods in strings:
 			----------------------------------------
 				- Since string is immutable object, most of the methods in string returns a value without altering the original variable.
 				- Some of the commonly used methods are,
 
-					2.2.2.1. capitalize():
+					2.2.2.2.1. capitalize():
 					----------------------
 						- This method will capitalize first letter of the given string.
 						-  syntax:    <string_var_name>.capitalize()
@@ -136,7 +136,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							b=a.capitalize()
 							print(b)  # gives "We loves python"
 
-					2.2.2.2. upper():
+					2.2.2.2.2. upper():
 					----------------------
 						- This method will convert all the elements into upper case.
 						-  syntax:    <string_var_name>.upper()
@@ -146,7 +146,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							b=a.upper()
 							print(b)  # gives "WE LOVES PYTHON"
 
-					2.2.2.3. lower():
+					2.2.2.2.3. lower():
 					----------------------
 						- This method will convert all the elements into lower case.
 						-  syntax:    <string_var_name>.lower()
@@ -156,7 +156,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							b=a.upper()
 							print(b)  # gives "we loves python"
 
-					2.2.2.4. title():
+					2.2.2.2.4. title():
 					----------------------
 						- This method will convert given string into title case.
 						-  syntax:    <string_var_name>.title()
@@ -166,7 +166,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							b=a.upper()
 							print(b)  # gives "We Loves Python"
 
-					2.2.2.5. count("string",start_index,ending_index):
+					2.2.2.2.5. count("string",start_index,ending_index):
 					--------------------------------------------------
 						- This method will return the count of occurance of a string in the given string provided starting and ending index.
 
@@ -179,7 +179,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							d=a.count("my",5,20)   # d=1
 							print(b,c,d)           # gives 2,2,1
 
-					2.2.2.6. swapcase():
+					2.2.2.2.6. swapcase():
 					--------------------
 						- This method will return the string by swaping the case of the input string.
 						-  syntax:    <string_var_name>.swapcase()
@@ -189,7 +189,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							b=a.swapcase()        # "Jagan1234"
 							print(b)           
 
-					2.2.2.7. index("string",start_index,ending_index):
+					2.2.2.2.7. index("string",start_index,ending_index):
 					------------------------------------------------
 						- This method will return lowest index of a string in the given string provided between starting and ending index.
 						- If it doesn't find the index, it will throw error.
@@ -202,7 +202,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							d=a.index("my",5,20)   # error
 							print(b,c,d)           # gives 0,0,(error)
 
-					2.2.2.8. isdigit():
+					2.2.2.2.8. isdigit():
 					------------------------------------------------
 						- This method will check whether the given string has digits or not.
 						- It doesn't check for other language numbers.
@@ -220,7 +220,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							f=c.isdigit()        # False
 							print(d,e,f)           # gives False, True, False
 
-					2.2.2.9. isnumeric():
+					2.2.2.2.9. isnumeric():
 					------------------------------------------------
 						- This method will check whether the given string has digits or not.
 						- It will check for other language number as well
@@ -238,7 +238,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							f=c.isdigit()        # False
 							print(d,e,f)           # gives False, True, True
 					
-					2.2.2.10. isalpha():
+					2.2.2.2.10. isalpha():
 					--------------------
 						- This method will check whether the given string has alphabets or not.
 						- It will return
@@ -253,7 +253,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							d=b.isalpha()   	 # True
 							print(c,d)           # gives False, True
 
-					2.2.2.11. isalnum():
+					2.2.2.2.11. isalnum():
 					--------------------
 						- This method will check whether the given string has digits and alphabets.
 						- It will return
@@ -268,7 +268,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							d=b.isalnum()	     # False
 							print(c,d)           # gives True, False
 
-					2.2.2.12. islower():
+					2.2.2.2.12. islower():
 					--------------------
 						- This method will check whether the given string has alphabets which are lower case (digits are allowed).
 						- It will return
@@ -284,7 +284,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							print(c,d)           # gives True, False
 
 
-					2.2.2.13. isupper():
+					2.2.2.2.13. isupper():
 					--------------------
 						- This method will check whether the given string has all alphabets which are upper case (digits are allowed).
 						- It will return
@@ -299,7 +299,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							d=b.islower()	     # False
 							print(c,d)           # gives True, False
 
-					2.2.2.14. max(string,*iterables):
+					2.2.2.2.14. max(string,*iterables):
 					---------------------------------
 						- This method will return the maximum item from the given string/list.
 						- It will return maximum from string as per it's ASCII value
@@ -312,7 +312,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							d=max(b)    		#z as per ASCII table   
 							print(c,d)  		#5, z
 
-					2.2.2.15. min(string,*iterables):
+					2.2.2.2.15. min(string,*iterables):
 					---------------------------------
 						- This method will return the minimum item from the given string/list.
 						- It will return minimum from string as per it's ASCII value
@@ -325,7 +325,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							d=min(b)    		#Z as per ASCII table   
 							print(c,d)  		#5, Z
 
-					2.2.2.15. split(delimiter):
+					2.2.2.2.15. split(delimiter):
 					---------------------------
 						- This method will split the given string into list as per the given delimiter and number of times the split will happen.
 						-  syntax:    <string>.split(delimiter,number_of_times_split_to_happen)
@@ -336,7 +336,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							d=a.split('-',5)    	#split happen for 5 times only
 							print(c,d)  			#['9','8','7','6','5','4','3','2','1','0'],['9','8','7','6','5','4-3-2-1-0']
 
-					2.2.2.16. join(string):
+					2.2.2.2.16. join(string):
 					-----------------------
 						- This method will join the given list(all element must be string) or string into a string with delimiter in it.
 						-  syntax:    <delimiter>.join(string/list)
@@ -348,7 +348,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							d='-'.join(b)           #"9-8-7-6-5-4-3-2-1-0"
 							print(c,d)  
 
-					2.2.2.17. strip(<charecter>):
+					2.2.2.2.17. strip(<charecter>):
 					---------------------------
 						- This method will remove all leading and trailing charecter only as specified in argument.
 						- syntax:    <string>.strip(<charecter>)
@@ -358,7 +358,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							b=a.strip('-')    		#"98765--43210"
 							print(b)  
 
-					2.2.2.18. lstrip(delimiter):
+					2.2.2.2.18. lstrip(delimiter):
 					---------------------------
 						- This method will remove all leading charecter only as specified in argument.
 						- syntax:    <string>.lstrip(<charecter>)
@@ -368,7 +368,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							b=a.lstrip('-')    		#"98765--43210--"
 							print(b)  
 
-					2.2.2.19. rstrip(delimiter):
+					2.2.2.2.19. rstrip(delimiter):
 					---------------------------
 						- This method will remove all trailing charecter only as specified in argument.
 						- syntax:    <string>.rstrip(<charecter>)
@@ -378,7 +378,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							b=a.strip('-')    		#"--98765--43210"
 							print(b)  
 
-					2.2.2.20. len(string):
+					2.2.2.2.20. len(string):
 					----------------------
 						- This method will return the length of the string.
 						- syntax:    len(string)
@@ -388,8 +388,8 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							b=len(a)    		#10
 							print(b)  	
 
-					2.2.2.21. find("string",start_index,ending_index):
-					------------------------------------------------
+					2.2.2.2.21. find("string",start_index,ending_index):
+					------------------------------------------------------
 						- This method will return lowest index of a string in the given string provided between starting and ending index.
 						- If it doesn't find the index, it will return -1.
 						-  syntax:    <string_var_name>.find("string",start_index,ending_index)
@@ -401,8 +401,8 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							d=a.find("my",5,20)   # d=11
 							print(b,c,d)           # gives 0,0,11
 
-					2.2.2.22. replace(old,new,number_of_times_to_replace):
-					------------------------------------------------
+					2.2.2.2.22. replace(old,new,number_of_times_to_replace):
+					---------------------------------------------------------
 						- This method will return lowest index of a string in the given string provided between starting and ending index.
 						- If it doesn't find the charecter, it won't replace but it will simply return the string.
 						-  syntax:    <string_var_name>.replace(old,new,number_of_times_to_replace)
@@ -414,8 +414,8 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							print(b,"\n",c)           
 
 
-					2.2.2.23. rfind("string",start_index,ending_index):
-					------------------------------------------------
+					2.2.2.2.23. rfind("string",start_index,ending_index):
+					-------------------------------------------------------
 						- This method will return highest index of a string in the given string provided between starting and ending index (it's a kind of finding the string from reverse).
 						- If it doesn't find the index, it will return -1.
 						-  syntax:    <string_var_name>.find("string",start_index,ending_index)
@@ -427,8 +427,8 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							d=a.find("my",5,20)    # d=11
 							print(b,c,d)           # gives 11,11,11
 
-					2.2.2.24. rindex("string",start_index,ending_index):
-					------------------------------------------------
+					2.2.2.2.24. rindex("string",start_index,ending_index):
+					------------------------------------------------------
 						- This method will return highest index of a string in the given string provided between starting and ending index (it's a kind of finding the string from reverse).
 						- If it doesn't find the index, it will through error.
 						-  syntax:    <string_var_name>.rindex("string",start_index,ending_index)
@@ -440,7 +440,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 							d=a.rindex("my",5,20)    # d=error
 							print(b,c,d)           # gives 0,0,error
 
-		2.3. LIST:
+		2.2.3. LIST:
 		----------
 			- Lists (also array in some language) in python is declared by enclosing the elemnts inside "[]".
 			- Lists can hold mutiple datatypes inside it and it also supports multidimension lists.
@@ -453,10 +453,10 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 				c=[1,2,[3,4,[5,6,7]],8,9]				# multi dimensional list
 
 
-			2.3.1. LIST METHODS:
+			2.2.3.1. LIST METHODS:
 			--------------------
 
-				2.3.1.1. list(<string/tuple/dictionary>)
+				2.2.3.1.1. list(<string/tuple/dictionary>)
 				----------------------------------------
 					- List is a mutable object.
 					- this method will convert the given string/tuple/dictionary into list.
@@ -471,7 +471,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						z=list(c)              # [1, 2, 3,'j']
 						print (x,y,z)
 
-				2.3.1.2. len(<list>)
+				2.2.3.1.2. len(<list>)
 				----------------------------------------
 					- this method will return the number of element present in the list.
 					- syntax: len(<list>)	
@@ -480,7 +480,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						b=len(a)              # 7 
 						print (b)
 
-				2.3.1.3. min(<list>)
+				2.2.3.1.3. min(<list>)
 				--------------------
 					- this method will return the minimum element in the list.
 					- All the elements in the list must be of same datatype.
@@ -492,7 +492,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						y=min(b)              #  1
 						print (x,y)
 
-				2.3.1.4. max(<list>)
+				2.2.3.1.4. max(<list>)
 				--------------------
 					- this method will return the maximum element in the list.
 					- All the elements in the list must be of same datatype.
@@ -504,7 +504,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						y=max(b)              #  6
 						print (x,y)
 
-				2.3.1.5. append(<element>)
+				2.2.3.1.5. append(<element>)
 				----------------------------------------
 					- this method will append the element at the end of list.
 					- The elements are added as last element, it won't check for duplication. whatever passed as argument it will add to the list.
@@ -518,7 +518,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						a.append({1:50,2:100})		# [1,2,3,4,[5,6,7],"jagan",{1:50,2:100}]
 						print (a)
 
-				2.3.1.6. extend(<list>)
+				2.2.3.1.6. extend(<list>)
 				----------------------------------------
 					- this method will extend one list with another list.
 					- syntax: <list1>.extend(<list2>)	
@@ -528,7 +528,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						a.extend(b)		# [1,2,3,4,5,"jagan"]
 						print (a)
 
-				2.3.1.7. insert(<index>,<element>)
+				2.2.3.1.7. insert(<index>,<element>)
 				----------------------------------------
 					- this method will insert the given element in given position into the list.
 					- If the index went out of bound, then the element is appended at the end.
@@ -539,7 +539,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						a.insert(10,7)	 # [1,2,3,0,4,5,6,7]
 						print (a)
 
-				2.3.1.8. remove(<element>)
+				2.2.3.1.8. remove(<element>)
 				----------------------------------------
 					- this method will remove the given element from the list from index 0 to n. (It will do for only once).
 					- syntax: <list1>.remove(<element>)	
@@ -549,7 +549,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						print (a)
 
 
-				2.3.1.9. pop(<position>)
+				2.2.3.1.9. pop(<position>)
 				----------------------------------------
 					- this method will pop out the element from the given position.
 					- the element is removed from the original list and returned.
@@ -560,7 +560,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						b=a.pop(2)		# a=[1,2,4,5]
 						print (b)       # 3
 
-				2.3.1.10. index(<element>)
+				2.2.3.1.10. index(<element>)
 				----------------------------------------
 					- this method will return index of first occurance of the given element.
 					- If the element is not found, it will throw error.
@@ -570,7 +570,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						b=a.index(2)		# index posisiton 1
 						print (b)           #  b=1
 
-				2.3.1.11. count(<element>)
+				2.2.3.1.11. count(<element>)
 				----------------------------------------
 					- this method will return number of occurance of the given element in a list.
 					- If the element is not found, it return zero.
@@ -581,7 +581,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						b=a.count(2)		# b=4
 						print (b)           
 
-				2.3.1.12. sort(<key>,<reverse=True/False>)
+				2.2.3.1.12. sort(<key>,<reverse=True/False>)
 				----------------------------------------
 					- this method will sort the elements in the list, by default it will sort by ascending order.
 					- If the reverse=True, it will sort in reverse order.
@@ -593,7 +593,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						a.sort(reverse=True)		# sort in decending order
 						print (a)           #  [8, 5, 4, 3, 2, 2, 1]
 
-				2.3.1.13. reverse()
+				2.2.3.1.13. reverse()
 				-------------------
 					- this method will simply reverse the list without sorting it.
 					- syntax: <list1>.reverse()	
@@ -602,7 +602,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						a.reverse()
 						print (b)           #  [8, 5, 1, 2, 4, 3, 2]
 
-				2.3.1.14. copy()
+				2.2.3.1.14. copy()
 				----------------
 					- this method will do complete copy of the list and returns it.
 					- syntax: <list1>.copy()	
@@ -612,7 +612,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						a.clear()      		#  empty list []
 						print (b,a)			# [2,3,4,2,1,5,8] , []
 
-				2.3.1.14. clear()
+				2.2.3.1.14. clear()
 				----------------------------------------
 					- this method will clear all the elements in a list.
 					- syntax: <list1>.clear()	
@@ -621,7 +621,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						a.clear()      		#  empty list []
 						print (a)			#  []
 
-			2.3.2. LIST SLICING
+			2.2.3.2. LIST SLICING
 			--------------------
 				- It is the process of extracting the specific elements from the list.
 				- In python we have two type of indexing,
@@ -652,8 +652,8 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 					print (a[:2:-1])   #[10, 9, [4, 5, [6, 7, 8]], 'jagan']
 
 
-		2.4. TUPLES:
-		------------
+		2.2.4. TUPLES:
+		--------------
 			- Tuple is consist of sequence of elements which may contain different datatypes.
 			- It is immutable object object. Most of it's operation is similar to list.
 			- Indexing/slicing is similar to list.
@@ -669,9 +669,9 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 
 			- It is not as flexible as list. It has less built in methods compared to list.
 
-			2.4.1.Tuple Methods:
+			2.2.4.1.Tuple Methods:
 			--------------------
-				2.4.1.1 tuple(<string/list/dictionary>)
+				2.2.4.1.1 tuple(<string/list/dictionary>)
 				----------------------------------------
 					- this method will convert the given string/list/dictionary into tuple.
 					- for dictionary, only key values are taken and formed as list.
@@ -686,7 +686,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						z=tuple(c)              # (1, 2, 3,'j')
 						print (x,y,z)
 
-				2.4.1.2. count(<element>)
+				2.2.4.1.2. count(<element>)
 				---------------------------
 					- this method will return number of occurance of the given element in a tuple.
 					- If the element is not found, it return zero.
@@ -697,7 +697,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						b=a.count(2)		# b=4
 						print (b)           
 
-				2.4.1.3. index(<element>)
+				2.2.4.1.3. index(<element>)
 				--------------------------
 					- this method will return index of first occurance of the given element.
 					- If the element is not found, it will throw error.
@@ -707,7 +707,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						b=a.index(2)		# index posisiton 1
 						print (b)           #  b=1
 
-				2.4.1.4. len(<tuple>)
+				2.2.4.1.4. len(<tuple>)
 				----------------------------------------
 					- this method will return the number of element present in the tuple.
 					- syntax: len(<tuple>)	
@@ -716,7 +716,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						b=len(a)              # 7 
 						print (b)
 
-				2.4.1.5. min(<tuple>)
+				2.2.4.1.5. min(<tuple>)
 				---------------------
 					- this method will return the minimum element in the tuple.
 					- All the elements in the tuple must be of same datatype.
@@ -728,7 +728,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						y=min(b)              #  1
 						print (x,y)
 
-				2.4.1.6. max(<tuple>)
+				2.2.4.1.6. max(<tuple>)
 				--------------------
 					- this method will return the maximum element in the tuple.
 					- All the elements in the tuple must be of same datatype.
@@ -740,7 +740,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						y=max(b)              #  6
 						print (x,y)
 
-				2.4.1.7. reversed(<tuple>)
+				2.2.4.1.7. reversed(<tuple>)
 				---------------------------
 					- tuple don't have reverse() unlike list.
 					- this method will simply reverse the tuple without sorting it as a object (not as a tuple).
@@ -750,7 +750,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						b=reversed(a)
 						print (b)           #  object containing (8, 5, 1, 2, 4, 3, 2)
 
-		2.5. DICTIONARY:
+		2.2.5. DICTIONARY:
 		----------------
 			- It is an unordered collection of items.
 			- Each item in a dictionary has a key and each key is associated with a value.
@@ -774,9 +774,9 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 				del dict2['F']								 # Delete an item from dictionary
 				print (dict2)								 # {'A': 10, 'B': 20, 'C': 25, 'D': 40, 'E': 50}
 
-			2.5.1. Dictionary Methods
+			2.2.5.1. Dictionary Methods
 			--------------------------
-				2.5.1.1. len(<dict>)
+				2.2.5.1.1. len(<dict>)
 				----------------------------------------
 					- this method will return the number of element(as keys) present in the dictionary.
 					- syntax: len(<dict>)	
@@ -785,7 +785,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						b=len(a)              # 5 
 						print (b)
 
-				2.5.1.2. str(<dict>)
+				2.2.5.1.2. str(<dict>)
 				---------------------
 					- this method will convert the dictionary into string.
 					- this will convert the charecter including {,',: as str.
@@ -795,7 +795,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						b=str(a)              # 5 
 						print (b)			  # "{'A' : 10, 'B' : 20, 'C' : 30, 'D' : 40, 'E' : 50}"  it adds space as well.
 
-				2.5.1.3. clear()
+				2.2.5.1.3. clear()
 				----------------
 					- this method will clear all the entry from dictionary.
 					- syntax: <dict>.clear()	
@@ -804,7 +804,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						a.clear()              					# It will clear all the elements.
 						print (a)			  					# empty dict
 
-				2.5.1.4. copy()
+				2.2.5.1.4. copy()
 				----------------
 					- this method will deep copy the complete dictionary.
 					- syntax: <dict>.copy()	
@@ -816,7 +816,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						print (b)			  # b={'A':10,'B':20,'C':30,'D':40,'E':50}
 
 				
-				2.5.1.5. get(<key>,default=None)
+				2.2.5.1.5. get(<key>,default=None)
 				----------------------------------------
 					- this method will return the value for given key value.
 					- If the key is not found, it will return None. If needed we can modify the error message from default statement.
@@ -832,7 +832,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						f=a.get('J',"key not found")    # return specific msg
 						print (b,"\n",c,"\n",d,"\n",e,"\n",f)
 
-				2.5.1.6. keys()
+				2.2.5.1.6. keys()
 				----------------
 					- this method will return the all the keys from the dictionary as a dict_keys which doesn't support indexing.
 					- This dict_keys is further converted into list using list().
@@ -847,7 +847,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						print(c[1])                       # 'B'
 
 
-				2.5.1.7. values()
+				2.2.5.1.7. values()
 				----------------
 					- this method will return the all the values from the dictionary as a dict_values which doesn't support indexing.
 					- This dict_values is further converted into list using list().
@@ -861,7 +861,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						print(type(c))                    # <class 'list'>
 						print(c[1])                       # 20
 
-				2.5.1.8. items()
+				2.2.5.1.8. items()
 				----------------
 					- this method will return the all the keys and values from the dictionary as a dict_items which doesn't support indexing.
 					- This dict_items is further converted into list using list() function.
@@ -877,7 +877,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						print (c[1])              # ('B', 20)
 						print(type(c[1]))         # <class 'tuple'>
 
-					2.5.1.8.1. Looping through key and values parallely.
+					2.2.5.1.8.1. Looping through key and values parallely.
 					----------------------------------------------------
 						- we can loop through key and values parallely by simple using for loop.
 
@@ -887,7 +887,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
     							print (i,"=",j);  		# print each key and values
 
 
-				2.5.1.9. has_key(<key>) (only until python 2.6 version, removed in python 3.x)
+				2.2.5.1.9. has_key(<key>) (only until python 2.6 version, removed in python 3.x)
 				-----------------------------------------------------------------------------
 					- this method will check whether the given key is present or not.
 					- return True if key is found, else return false.
@@ -903,7 +903,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 					- For python 3.x versions, we can use 'in' keyword to check whether the given key is present or not. 
 
 
-				2.5.1.10. pop(<key>)
+				2.2.5.1.10. pop(<key>)
 				--------------------
 					- this method will pop the value for given key from dictionary.
 					- if key is not found, will show error.
@@ -915,7 +915,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						print(b)            # '30'
 						print(a)            # {'A': 10, 'B': 20, 'D': 40, 'E': 50}
 
-				2.5.1.11. update(<dict2>)
+				2.2.5.1.11. update(<dict2>)
 				--------------------------
 					- this method will update/merge one dictionary with another.
 					- If the same key found on both dictionary, then it will update the new key value(i.e. from dict2). 
@@ -928,7 +928,8 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						print(b)            # {'A': 80, 'B': 90, 'F': 60, 'G': 70}
 						print(a)            # {'A': 80, 'B': 90, 'C': 30, 'D': 40, 'E': 50, 'F': 60, 'G': 70}
 
-					
+	2.3. Commonly used built-in Methods:
+	------------------------------------					
 				
 
 
