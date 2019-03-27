@@ -1503,7 +1503,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
   	- The various File Access Modes are,
 
   		r      ->  read only mode
-  		rb     ->  read in binary mode
+  		rb     ->  read in binary mode  (binary modes are used for handling files like image,exe format files)
   		r+     ->  read and write mode
   		rb+    ->  read and write mode in binary mode
   		w      ->  write only mode	(overwite the file, if file exists. create a new file, if not exists)
@@ -1517,7 +1517,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 
   	5.1. Methods for file handling:
   	-------------------------------
-  	- There are methods available for file handling in python. It is better to go through the methods before using it.
+  	    - There are methods available for file handling in python. It is better to go through the methods before using it.
 
 	  	5.1.1. open(<path_to_file>,<mode>)
 	  	-----------------------------------
@@ -1528,7 +1528,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 	  			file=open('D:/path/to/the/file','a+')
 
 	  	5.1.2. read(<byte_size>)
-	  	-----------------------------------
+	  	------------------------
 	  		- This function will return the all lines from the given file if byte size is not given.
 	  		- If byte size(i.e. number of charecter in some sense) is given then this function will return the specified bytes data from the given file.
 	  		- syntax : <file>.read(<byte_size>)
@@ -1654,4 +1654,34 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 				print(file.tell())                          # current pointer position 0
 				file.write("writing a First line\n\n")      # replacing old lines
 				file.close()
+
+	5.2. File Handling Examples:
+	----------------------------
+		- There are multiple ways we can handle a file. the most common ways are using with statement, for loops, read/write inbuilt functions.
+		- When we use 'with' statement, it is not mandatory to use close() function because as soon as with statement finish it will close the file as well.
+
+		- e.g-1:  Typical way
+		---------------------
+			file=open('sample.txt','r+')     #reading all lines / each line by line.
+			a=file.read()                    # read all the charecters in the file using read().
+			file.close()
+			print(a)
+
+		- e.g-2:  using for loop
+		-------------------------
+			file=open('sample.txt','r+')
+			for i in file:
+			    print("--------\n",i)       # print all charecter between each new line (\n).
+			file.close()
+
+		- e.g-3:  using with statement
+		------------------------------
+			with open('sample.txt','r+') as f:   # read line by line
+			    for i in f:
+			        print("--------\n",i)       # print all charecter between each new line (\n).
+
+
+			with open('sample.txt','r+') as f:    # read all lines
+			    a=f.read()
+			    print (a)
 
