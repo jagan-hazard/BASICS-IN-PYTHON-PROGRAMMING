@@ -1558,6 +1558,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 	  	-----------------------------------
 	  		- This function will return a list containing charecter till each new line charecter as one element, if byte size is not given.
 	  		- If byte size(i.e. number of charecter in some sense) is given then this function will return list containing the specified bytes data from the given line.
+	  		- It will append new line charecter "\n" at the end of each element in a list.
 	  		- syntax : <file>.readlines(<byte_size>)
 
 	  		e.g:
@@ -1568,7 +1569,31 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 				file.close()
 				print (a,b)
 
-	  	5.1.5. close()
+		5.1.5. readable()
+	  	-----------------------------------
+	  		- This function will tell whether the given file is readable or not (check for unsupported charecter).
+	  		- return True if readable, else False.
+	  		- syntax : <file>.readable()
+
+	  		e.g:
+	  			file=open('sample.txt','r')
+				a=file.readable()					# True
+				file.close()
+				print (a)
+
+		5.1.6. writeable()
+	  	-----------------------------------
+	  		- This function will tell whether the given file is writable or not (check for unsupported charecter).
+	  		- return True if writeable, else False.
+	  		- syntax : <file>.writeable()
+
+	  		e.g:
+	  			file=open('sample.txt','w+')
+				a=file.writeable()					# True
+				file.close()
+				print (a)
+
+	  	5.1.7. close()
 	  	---------------
 	  		- This function will close the file handler.
 	  		- syntax : <file>.close()
@@ -1578,7 +1603,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 	  			a=file.read()
 	  			file.close()				# close the file handler
 	  	
-	  	5.1.6. write(<string>)
+	  	5.1.8. write(<string>)
 	  	-----------------------------------
 	  		- This function will write the given string into the file.
 	  		- Make sure to choose the right mode for your purpose whether append mode or write mode.
@@ -1589,7 +1614,19 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 				file.write("\n\n\n writing a new line")		# writing the given string
 				file.close()
 
-	  	5.1.7. tell()
+		5.1.9. writelines(<list>)
+	  	-----------------------------------
+	  		- This function will write a list containing charecter into the file.
+	  		- It won't automatically add new line charecter into each element in a list.
+	  		- syntax : <file>.writelines(<list>)
+
+	  		e.g:
+	  			a=["Python","is","a","best","programming","language"]           
+				file=open('writelines.txt','w+')
+				file.writelines(a)      # Pythonisabestprogramminglanguage  - without new line charecter.
+				file.close()
+
+	  	5.1.10. tell()
 	  	--------------
 	  		- This function will return the current position of the pointer in the file.
 	  		
@@ -1602,7 +1639,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 				print(file.tell())                          # current pointer position 2943
 				file.close()
 
-	  	5.1.8. seek(<position>)
+	  	5.1.11. seek(<position>)
 	  	------------------------
 	  		- This function will change the position of the pointer in the file.
 	  		
@@ -1617,6 +1654,4 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 				print(file.tell())                          # current pointer position 0
 				file.write("writing a First line\n\n")      # replacing old lines
 				file.close()
-
-				
 
