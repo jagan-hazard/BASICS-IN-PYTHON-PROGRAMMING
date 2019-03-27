@@ -1515,8 +1515,108 @@ It has vast libraries and packages that will help you in anywhere, few notable l
   		a+     ->  read and appends
   		ab+    ->  read and appends in binary mode
 
+  	5.1. Methods for file handling:
+  	-------------------------------
+  	- There are methods available for file handling in python. It is better to go through the methods before using it.
+
+	  	5.1.1. open(<path_to_file>,<mode>)
+	  	-----------------------------------
+	  		- This function will open the file from the given location.
+	  		- syntax : open(<path_to_file>,<file_access_mode>)
+
+	  		e.g:
+	  			file=open('D:/path/to/the/file','a+')
+
+	  	5.1.2. read(<byte_size>)
+	  	-----------------------------------
+	  		- This function will return the all lines from the given file if byte size is not given.
+	  		- If byte size(i.e. number of charecter in some sense) is given then this function will return the specified bytes data from the given file.
+	  		- syntax : <file>.read(<byte_size>)
+
+	  		e.g:
+	  			file=open('sample.txt','r')
+				a=file.read()					# read all the charecter
+				b=file.read(15)					# read all 15 charecter
+				file.close()
+				print (a)
+	  	
+	  	5.1.3. readline(<byte_size>)
+	  	-----------------------------------
+	  		- This function will return each line at once, if byte size is not given.
+	  		- If byte size(i.e. number of charecter in some sense) is given then this function will return the specified bytes data from the given line.
+	  		- syntax : <file>.readline(<byte_size>)
+
+	  		e.g:
+	  			file=open('sample.txt','r')
+				a=file.readline()       # read till it reach first new line cgarecter (\n)
+				b=file.readline(100)    # read 100 charecter till it reach first next line charecter (\n)
+				c=file.readline(10000)  # even the limit exceeds,read till it maximum charecter available in the file.
+				file.close()
+				print (a,b,c)
+
+		5.1.4. readlines(<byte_size>)
+	  	-----------------------------------
+	  		- This function will return a list containing charecter till each new line charecter as one element, if byte size is not given.
+	  		- If byte size(i.e. number of charecter in some sense) is given then this function will return list containing the specified bytes data from the given line.
+	  		- syntax : <file>.readlines(<byte_size>)
+
+	  		e.g:
+	  			file=open('sample.txt','r')
+				a=file.readlines()       	# read till it reach first new line charecter (\n).
+				file.seek(0)      			# will change the position of pointer.
+				b=file.readlines(800) 		# read 100 charecter till it reach first new line charecter (\n).
+				file.close()
+				print (a,b)
+
+	  	5.1.5. close()
+	  	---------------
+	  		- This function will close the file handler.
+	  		- syntax : <file>.close()
+
+	  		e.g:
+	  			file=open('D:/path/to/the/file','a+')
+	  			a=file.read()
+	  			file.close()				# close the file handler
+	  	
+	  	5.1.6. write(<string>)
+	  	-----------------------------------
+	  		- This function will write the given string into the file.
+	  		- Make sure to choose the right mode for your purpose whether append mode or write mode.
+	  		- syntax : <file>.write(<string>)
+
+	  		e.g:
+	  			file=open('sample.txt','a+')   				# append mode
+				file.write("\n\n\n writing a new line")		# writing the given string
+				file.close()
+
+	  	5.1.7. tell()
+	  	--------------
+	  		- This function will return the current position of the pointer in the file.
+	  		
+	  		- syntax : <file>.tell()
+
+	  		e.g:
+	  			file=open('sample.txt','a+')
+				print(file.tell())                          # current pointer position 2918
+				file.write("\n\n\n writing a new line")     
+				print(file.tell())                          # current pointer position 2943
+				file.close()
+
+	  	5.1.8. seek(<position>)
+	  	------------------------
+	  		- This function will change the position of the pointer in the file.
+	  		
+	  		- syntax : <file>.seek(<position>)
 
 
+	  		e.g:
+	  			file=open('seek_ops.txt','w+')
+				file.write("Writing a wrong line")          # writing wrong line
+				print(file.tell())                          # current pointer position 23
+				file.seek(0)                                # pointer position changed to 0.
+				print(file.tell())                          # current pointer position 0
+				file.write("writing a First line\n\n")      # replacing old lines
+				file.close()
 
-
+				
 
