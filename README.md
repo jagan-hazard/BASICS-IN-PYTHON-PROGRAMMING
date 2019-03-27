@@ -129,7 +129,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 						position  - position of the placeholder
 						width     - how many minimum space needed
 						precision - how many digits to retail
-						type      - integer(d),float(f),string(s)
+						type      - integer(d),float(f),string(s),hexadecimal(x),fixed point decimal(f),percentage(%)
 					-If the precision is higher than input then it will do padding(adds the digit (12300000000...)).
 
 				e.g:
@@ -1374,7 +1374,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 					    print("{}.player name:{}".format(j,i))				
 					    j+=1
 
-		2.5.1. while loop:
+		2.5.2. while loop:
 		------------------
 			- It is similar to while loop in other language. It is used when the limit is unknown.
 			- syntax:
@@ -1391,5 +1391,101 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 					    print(i)
 					    i+=1
 
+	2.6. Functions in python:
+	--------------------------
+		- Functions is a block of code that perform a specific task.
+		- "def" is the keyword used to define a function.
+		
+		- syntax:
+		---------
+
+				def function_name(optional_parameters):
+					statements
+					...
+					...
+				
+				function_name(optional_parameter)		 		# calling a function
+
+		e.g:
+
+			def add(x,y):
+			    return (x+y)
+
+			x=add(5,10)
+			print(x)
 
 
+		2.6.1. Parameter passing in function:
+		-------------------------------------
+			- similar to many other programming language python supports twokind of parameter passing
+
+					- Pass by value     (For immutable objects)
+					- Pass by reference (For mutable objects)
+
+			- Python itself decide the which method is choosed based on the input argument datatypes.
+
+		2.6.2. ordering and default arguments:
+		--------------------------------------
+			- Python has four kind of argument passing. They are,
+
+				- Positional arguments
+				- Keyword arguments
+				- Default arguments
+				- Variable arguments
+
+			2.6.2.1. Positional arguments:
+			------------------------------
+				- In this method, the arguments are passed as per their position (Kind of one to one correspondence).
+
+				 e.g:
+
+				 	def add(x,y):
+					    return (x+y)
+
+					a=add(5,10)
+					print(a)
+
+			2.6.2.2. Keyword arguments:
+			------------------------------
+				- In this method, the arguments are passed as per their names (keywords).
+				- Here, the position may varies but their name is matched.
+
+				 e.g:
+
+				 	def add(x,y):
+					   return (x**y)   
+
+					a=add(y=3,x=2)
+					print(a)
+
+			2.6.2.3. Default arguments:
+			------------------------------
+				- This method is used where we need some arguments to have some default values if value is not given for that default argument.
+				- if the new argument are passed from function call, then the default value is overridden by new value.
+
+
+				 e.g:
+
+				 	def add(x,y=1):
+					   return (x**y)   
+
+					a=add(x=2)              # y value is taken from default value
+					b=add(y=3,x=2)          # y value is overridden
+					print(a,b)              # a=2 b=8
+
+			2.6.2.4. Variable arguments:
+			----------------------------
+				- This method is very useful if we don't the count of arguments.
+				- In this method, argument count is not limited.
+				- (*args) represents the variable argument. The variable argument is passed as tuples.
+
+				 e.g:
+
+				 	def add(x,y,*z):  # *z is considered as tuples
+					    return (x+y+sum(z))
+
+					a=add(5,10,10)
+					b=add(5,10,10,5,10,20)
+					c=add(5,10,10,1,2,3,10,10,10,-9,5)
+
+					print(a,b,c)    # a=25 b=60 c=57
