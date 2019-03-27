@@ -19,7 +19,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 	Data Science - Numpy,NLTK,Matplotlib,scipy,pandas, etc,
 	Web Scrapping - Scrapy, Beautiful soup, etc,
 	GUI Development -PyQT,Kivy, etc.
-	
+  	
   2. Basic Elements in Python
   -----------------------------
     2.1. Variables, Identifiers and Keywords
@@ -1489,3 +1489,34 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 					c=add(5,10,10,1,2,3,10,10,10,-9,5)
 
 					print(a,b,c)    # a=25 b=60 c=57
+  
+  3. Regular Expression:
+  ----------------------
+
+  4. Exception Handling:
+  ----------------------
+
+  5. File Handling in python:
+  ---------------------------
+  	- Python has various modules for file handling. But the default file handler will handle most of the commonly used files.
+  	- File mode is responsible how the file handler will handle the file whether it's in reading mode alone or writing mode alone or both and much more. 
+  	- The various File Access Modes are,
+
+  		r      ->  read only mode
+  		rb     ->  read in binary mode
+  		r+     ->  read and write mode
+  		rb+    ->  read and write mode in binary mode
+  		w      ->  write only mode	(overwite the file, if file exists. create a new file, if not exists)
+  		wb     ->  write in binary mode
+  		w+     ->  read and write mode (overwite the file, if file exists. create a new file, if not exists)
+  		wb+    ->  read and write mode in binary mode
+  		a      ->  append mode.(it won't overwite the file if exists).
+  		ab     ->  append in binary mode
+  		a+     ->  read and appends
+  		ab+    ->  read and appends in binary mode
+
+
+
+
+
+
