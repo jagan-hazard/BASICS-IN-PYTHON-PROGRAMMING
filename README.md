@@ -1475,7 +1475,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 
 			2.6.2.4. Variable arguments:
 			----------------------------
-				- This method is very useful if we don't the count of arguments.
+				- This method is very useful if we don't know the count of arguments.
 				- In this method, argument count is not limited.
 				- (*args) represents the variable argument. The variable argument is passed as tuples.
 
