@@ -1495,7 +1495,118 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 
   4. Exception Handling:
   ----------------------
+  	- There are three types of error. They are
 
+  		I. syntax error    -> syntax error is an error in the syntax based on programming language. A program will not compile until all syntax errors are corrected.
+  		II. semantic error -> A semantic occurs due to the wrong use of the variables. The syntax of the programming language would be correct but the problem may be caused due to the use of wrong variables, wrong operations or in a wrong order. The compiler cant catch this error.
+  		III. Logic error   -> a logic error is a bug in a program that causes it to operate incorrectly, but not to terminate abnormally.
+
+  	- Exceptions:
+  	-------------
+  		- Errors that detected during execution of the program is called exception.
+  		- These errors will result in termination of the program.
+  		- Exception handling is needed to avoid unwanted termination of the program.
+  		- For example, if certain error are expected and we wanted to skip these errors and we need to run rest of the code, we will use exception handling to perform this.
+  		- There are many types of exception in python. They are,
+
+![Screenshot](Types_of_Exceptions.png)
+		
+		- syntax: 
+		---------
+		try:   	    					# only one try block. It starts executing the code
+			... 
+		except <exception_type_1>:      # this will run if respective exception occured
+			...
+		except <exception_type_2>:	    # this will run if respective exception occured
+			...
+		except <exception_type_n>:      # we can add n number of except block
+			...
+		else:							# if no exception found, then runs the code
+			...
+		finally:						# always run (doesn't care about exception)
+			...
+
+		- Exception can be used in three combination. They are,
+
+			i) try...except
+			ii) try...except...else
+			iii) try...except...else...finally
+		- Let us consider the example through which we will discuss each combination of exception,
+
+			import study_python  		#this line cause import error which will terminate the program without executing further
+			print("Module import error occured")   # this line and lines below won't exceuted
+			def add(a,b)        :
+			    return (a+b)
+			x=add(5,10)
+			print(x)
+
+		4.1.1. try...except:
+		--------------------
+		- Here the try block contain the code which may cause some kind of error, except block may be specific(by mentioning the exception type) or may be general except block(without mantioning it's exception type in it).
+		- If the except block is specific, then this block will excecute only if that exception occured.
+		- we can use general exception block, which will take care any exception for first time. If again another excpetion occurs, this will terminate the program.
+
+		- e.g: 
+			try:
+	 		    def div(a,b):
+			        return (a/b)
+			    a=int(input("please enter the divident:"))
+			    b=int(input("please enter the divisor:"))   # if zero is input, then exception occured
+			    x=div(a,b)
+			    print("output =", x)
+			except ZeroDivisionError:                       # Zero division error is handles in this block
+			    print("ZeroDivisionError error occured, Please enter the non-zero element for divisor !!!")
+			    b=int(input("please enter the divisor:"))
+			    x=div(a,b)
+			    print("output =", x)
+			except:  				# just to be cautious, adding this block if any further error occured
+			    print("Some error occured, Please check the code!!!")
+
+		4.1.2. try...except...else:
+		---------------------------
+		- In this combination else block is added. else block will execute only if no exception occured.
+		- e.g: 
+			try:
+	 		    def div(a,b):
+			        return (a/b)
+			    a=int(input("please enter the divident:"))
+			    b=int(input("please enter the divisor:"))   # if zero is input, then exception occured
+			    x=div(a,b)
+			    print("output =", x)
+			except ZeroDivisionError:                       # Zero division error is handles in this block
+			    print("ZeroDivisionError error occured, Please enter the non-zero element for divisor !!!")
+			    b=int(input("please enter the divisor:"))
+			    x=div(a,b)
+			    print("output =", x)
+			except:  				# just to be cautious, adding this block if any further error occured
+			    print("Some error occured, Please check the code!!!")
+			else:
+    			print("No error occured and program run successfully!!!")   
+
+
+		4.1.3. try...except...else...finally:
+		-------------------------------------
+		- In this combination finally block is added. finally block will always execute irrespective of exception.
+		- e.g: 
+			try:
+			    def div(a,b):
+			        return (a/b)
+			    a=int(input("please enter the divident:"))
+			    b=int(input("please enter the divisor:"))
+			    x=div(a,b)
+			    #print(x)
+			except ZeroDivisionError:
+			    print("ZeroDivisionError error occured, Please enter the non-zero element for divisor !!!")
+			    b=int(input("please enter the divisor:"))
+			    x=div(a,b)
+			except:
+			    print("Some error occured, Please check the code!!!")
+			else:
+			    print("No error occured and program run successfully!!!")   
+			finally:
+			    print("The output value is=",x) 
+
+			    
   5. File Handling in python:
   ---------------------------
   	- Python has various modules for file handling. But the default file handler will handle most of the commonly used files.
@@ -1517,7 +1628,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 
   	5.1. Methods for file handling:
   	-------------------------------
-  	    - There are methods available for file handling in python. It is better to go through the methods before using it.
+  	    - There are some usefull methods available for file handling in python. It is better to go through the methods before using it.
 
 	  	5.1.1. open(<path_to_file>,<mode>)
 	  	-----------------------------------
