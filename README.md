@@ -1317,13 +1317,25 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 					statements
 					...
 
-				e.g:
+				e.g-1:
 					if (3>4):						# bracket is  not mandatory
 						print ("If Condition")
 					elif (3>1):
 						print ("elif Condition")
 					else:
 						print("else Condition")
+				
+				e.g-2
+					x=input("Enter the charecter:")  #give some input
+					x=x.lower()  #lower all the letters
+					if  "dog" in x and  "cat" in x:
+					    print("Dog and cat found")
+					elif "dog" in  x:
+					    print("Dog found")
+					elif "cat" in x:
+					    print("Cat found")
+					else:
+					    print("Not finding cat or dog in the string")
 
 	2.5. Looping:
 	-------------			
