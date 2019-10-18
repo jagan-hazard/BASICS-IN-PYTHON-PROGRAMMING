@@ -169,7 +169,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 
 						e.g:
 							a="We Loves PYTHON"
-							b=a.upper()
+							b=a.lower()
 							print(b)  # gives "we loves python"
 
 					2.2.2.2.4. title():
@@ -179,7 +179,7 @@ It has vast libraries and packages that will help you in anywhere, few notable l
 
 						e.g:
 							a="We loves pYTHON"
-							b=a.upper()
+							b=a.title()
 							print(b)  # gives "We Loves Python"
 
 					2.2.2.2.5. count("string",start_index,ending_index):
